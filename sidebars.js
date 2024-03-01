@@ -100,14 +100,8 @@ const sidebars = {
       type: 'category',
       label: 'Lua Scripting',
       items: [
-        {
-          type: 'category',
-          label: 'Lua Basics',
-          items: [
-            "lua-scripting/lua-basics/intro",
-            "lua-scripting/lua-basics/lua",
-          ],
-        },
+        "lua-scripting/lua-basics/intro",
+        "lua-scripting/lua-basics/lua", 
         {
           type: 'category',
           label: "Pathing API",
