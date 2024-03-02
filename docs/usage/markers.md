@@ -7,7 +7,7 @@ title: Setup
 
 To provide marker pack support, Blish HUD can use the "Pathing" module.  The pathing module supports using TacO style marker packs (as .taco or .zip files) in Blish HUD!
 
-To install the Pathing module, find the **Pathing** module within the Module Repo and install it (see: [Installing modules](/docs/user/installing-modules)).
+To install the Pathing module, find the **Pathing** module within the Module Repo and install it (see: [Installing modules](https://blishhud.com/docs/user/installing-modules)).
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/jz1afT6_wxU" frameborder="0" allow="fullscreen; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
 
