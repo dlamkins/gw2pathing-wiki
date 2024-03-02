@@ -30,7 +30,7 @@ Behavior IDs of 100 and above are Blish HUD specific and will do nothing in TacO
 |<center>1</center>| Reappear on map change | The marker hides when triggered until the map is changed. |
 |<center>2</center>| Reappear on daily reset | The marker hides when triggered until daily reset (UTC+0). |
 |<center>3</center>| Only visible before activation | The marker hides when triggered permanently. |
-|<center>4</center>| Reappear After Timer | The marker hides when triggered until the time specified by the [resetlength](ResetLength) attribute. |
+|<center>4</center>| Reappear After Timer | The marker hides when triggered until the time specified by the [resetlength](resetlength) attribute. |
 |<center>5</center>| Reappear on map reset | *Does nothing.  Not implemented by Blish HUD or TacO.* |
 |<center>6</center>| Once per instance | The marker hides when triggered until the instance is changed (a combination of map ID + shard ID). |
 |<center>7</center>| Once daily per character | The marker hides when triggered until the next day but will show for other characters which have not triggered it yet. |
