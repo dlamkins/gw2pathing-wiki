@@ -4,27 +4,74 @@
  * work well for content-centric websites.
  */
 
-/* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-color-primary: #303846;
+  --ifm-color-primary-dark: #2b323f;
+  --ifm-color-primary-darker: #29303c;
+  --ifm-color-primary-darkest: #222731;
+  --ifm-color-primary-light: #353e4d;
+  --ifm-color-primary-lighter: #374050;
+  --ifm-color-primary-lightest: #3e495b;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+/* TODO: You can get rid of this to do better styling, I was just lazy and got tired of white screen */
+.navbar {
+  background-color: var(--ifm-color-primary-darkest);
+  color: white;
+  padding: 1rem;
+}
+
+.navbar a {
+  color: white;
+}
+
+html {
+  background-color: var(--ifm-color-primary-darker);
+}
+
+/* Rest of this is from new.blishhud.com */
+
+.container {
+  color: white;
+}
+
+a {
+  color: #0073c5;
+}
+
+a:hover {
+  color: #0073c5;
+  text-decoration: underline;
+}
+
+a.table-of-contents__link {
+  color: #0073c5;
+}
+
+a.table-of-contents__link--active {
+  color: white;
+  font-weight: bold;
+}
+
+a.menu__link--active {
+  color: white;
+}
+
+a.menu__link:hover, .navbar__item.navbar__link:hover {
+  color: white;
+}
+
+a.navbar__link--active {
+  color:white;
+}
+
+.docusaurus-highlight-code-line {
+  background-color: rgb(34, 37, 51);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+.breadcrumbs__link {
+  color:white !important;
 }
