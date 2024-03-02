@@ -8,18 +8,13 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'GW2 Pathing Wiki',
+  title: 'GW2 Pathing',
   tagline: 'Markers, trails, and more for Guild Wars 2',
   favicon: 'img/favicon.ico',
-  url: 'https://gw2pathing-wiki.com', // TODO: Not sure if this will be the final URL
+  url: 'https://gw2pathing.com', // TODO: Not sure if this will be the final URL
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'dlamkins', // Usually your GitHub org/user name.
-  projectName: 'gw2pathing-wiki', // Usually your repo name.
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -51,7 +46,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'GW2 Pathing Wiki',
+        title: 'GW2 Pathing',
         logo: {
           alt: 'Pathing Wiki Logo',
           src: 'img/pathing-icon.png',
