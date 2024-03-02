@@ -20,21 +20,21 @@ If you need assistance or would like to provide suggestions for future attribute
 
 | Applies To | Attribute | Summary |
 |-|-|-|
-| Trails | [IsWall](/docs/markers/attributes/iswall) | *When enabled, a trail will be rendered on its edge like a boundary.* | 
-| Markers, Trails | [Mount](/docs/markers/attributes/mount) | *Hides the marker if the player is not currently riding one of the specified mounts.* | 
-| Markers, Trails | [Profession](/docs/markers/attributes/profession) | *Hides the marker or trail if the player is not currently one of the specified professions.* | 
-| Markers, Trails | [Race](/docs/markers/attributes/race) | *Hides the marker or trail if the player is not currently one of the specified races.* | 
-| Markers, Trails | [Specialization](/docs/markers/attributes/specialization) | *Hides the marker or trail if the player is not currently one of the specified specializations.* | 
-| Markers, Trails | [MapType](/docs/markers/attributes/maptype) | *Hides the marker or trail if the current map is not one of the specified map types.* | 
-| Markers, Trails | [Cull](/docs/markers/attributes/cull) | *Allows you to make markers or trails hidden depending on which direction they are looked at.* |
-| Markers, Trails | [CanFade](/docs/markers/attributes/canfade) | *Allows a marker or trail to ignore fade features such as those which hide trails around the player or between the user and their camera.* | 
-| Markers | [InvertBehavior](/docs/markers/attributes/invertbehavior) | *If enabled, the behavior attribute's effect is inverted.* | 
-| Markers | [Rotate](/docs/markers/attributes/rotate) | *Allows you to statically rotate a marker instead of it automatically facing the player.* |
-| Markers | [Bounce](/docs/markers/attributes/bounce) | *Allows a marker to "bounce" when triggered.* | 
-| Markers | [Show / Hide](/docs/markers/attributes/showhide) | *Allows showing or hiding a specified category when triggered.* |  
-| Markers | [Toggle](/docs/markers/attributes/toggle) | *Toggles a category on or off when triggered. Similar in behavior to the Show & Hide attributes.* | 
-| Markers, Categories | [Tip](/docs/markers/attributes/tip) | *Allows you to display a tooltip on markers on the minimap or categories in the category dropdown.* | 
-| Categories | [DefaultToggle](/docs/markers/attributes/defaulttoggle) | *Indicates if the category should be enabled by default.* | 
+| Trails | [IsWall](/docs/marker-dev/attributes/iswall) | *When enabled, a trail will be rendered on its edge like a boundary.* | 
+| Markers, Trails | [Mount](/docs/marker-dev/attributes/mount) | *Hides the marker if the player is not currently riding one of the specified mounts.* | 
+| Markers, Trails | [Profession](/docs/marker-dev/attributes/profession) | *Hides the marker or trail if the player is not currently one of the specified professions.* | 
+| Markers, Trails | [Race](/docs/marker-dev/attributes/race) | *Hides the marker or trail if the player is not currently one of the specified races.* | 
+| Markers, Trails | [Specialization](/docs/marker-dev/attributes/specialization) | *Hides the marker or trail if the player is not currently one of the specified specializations.* | 
+| Markers, Trails | [MapType](/docs/marker-dev/attributes/maptype) | *Hides the marker or trail if the current map is not one of the specified map types.* | 
+| Markers, Trails | [Cull](/docs/marker-dev/attributes/cull) | *Allows you to make markers or trails hidden depending on which direction they are looked at.* |
+| Markers, Trails | [CanFade](/docs/marker-dev/attributes/canfade) | *Allows a marker or trail to ignore fade features such as those which hide trails around the player or between the user and their camera.* | 
+| Markers | [InvertBehavior](/docs/marker-dev/attributes/invertbehavior) | *If enabled, the behavior attribute's effect is inverted.* | 
+| Markers | [Rotate](/docs/marker-dev/attributes/rotate) | *Allows you to statically rotate a marker instead of it automatically facing the player.* |
+| Markers | [Bounce](/docs/marker-dev/attributes/bounce) | *Allows a marker to "bounce" when triggered.* | 
+| Markers | [Show / Hide](/docs/marker-dev/attributes/showhide) | *Allows showing or hiding a specified category when triggered.* |  
+| Markers | [Toggle](/docs/marker-dev/attributes/toggle) | *Toggles a category on or off when triggered. Similar in behavior to the Show & Hide attributes.* | 
+| Markers, Categories | [Tip](/docs/marker-dev/attributes/tip) | *Allows you to display a tooltip on markers on the minimap or categories in the category dropdown.* | 
+| Categories | [DefaultToggle](/docs/marker-dev/attributes/defaulttoggle) | *Indicates if the category should be enabled by default.* | 
 
 
 ## Attribute Prefixes
