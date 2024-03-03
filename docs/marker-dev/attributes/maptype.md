@@ -1,28 +1,20 @@
 ---
 id: maptype
 title: MapType
+description: Hides the marker or trail if the current map is not one of the specified map types.
 hide_table_of_contents: true
 ---
+| Applies To | | Blish HUD (Pathing) | TacO | Burrito |
+|-|-|-|-|-|
+| <center>Markers, Trails</center> | | <center>✔</center> | <center>❌</center> | <center>❌</center> |
 
-| Applies To | | Blish HUD | TacO |
-|-|-|-|-|
-| <center>Markers, Trails</center> | | <center>✔</center> | <center>❌</center> |
 
 ## Description
-
-*Hides the marker or trail if the current map is not one of the specified map types.*
-
-| Attribute | Data Type | Example | Description |
-|-|-|-|-|
-| maptype | Custom String Array | `profession="instance,public"` | The map type(s) the marker or trail should be shown while on. |
-
+Hides the marker or trail if the current map is not one of the specified map types.
+| Attribute | Data Type | Default Value | Example | Description |
+|-|-|-|-|-|
+| maptype | string array |  | instance,public | 	The map type(s) the marker or trail should be shown while on. | 
 ## Supported values
-
-:::caution
-
-Map types can be difficult to predict and don't always match expectations.  It is best to check what the map type ID instead of assuming the map type.
-
-:::
 
 | Value | Description |
 |-|-|
@@ -56,3 +48,8 @@ This attribute supports providing an array of map types (values separated by com
 ## How it works
 
 The mumblelink API provides a value indicating the active map type.  This state is updated in realtime.
+
+:::warning 
+Map types can be difficult to predict and don't always match expectations.  It is best to check what the map type ID instead of assuming the map type.
+:::
+

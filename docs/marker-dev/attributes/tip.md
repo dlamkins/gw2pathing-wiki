@@ -1,27 +1,24 @@
 ---
 id: tip
 title: Tip
+description: Allows you to display a tooltip on markers on the minimap or categories in the category dropdown.
 hide_table_of_contents: true
 ---
+| Applies To | | Blish HUD (Pathing) | TacO | Burrito |
+|-|-|-|-|-|
+| <center>Markers, Category</center> | | <center>✔</center> | <center>❌</center> | <center>❌</center> |
 
-| Applies To | | Blish HUD | TacO |
-|-|-|-|-|
-| <center>Categories, Markers</center> | | <center>✔</center> | <center>❌</center> |
-
-:::caution
-
-`tip-name` is implemented on the mini-map but not for categories as a name would be redundant.
-
-:::
 
 ## Description
+Allows you to display a tooltip on markers on the minimap or categories in the category dropdown.
+| Attribute | Data Type | Default Value | Example | Description |
+|-|-|-|-|-|
+| tip-name | string |  | Golden Coin | The text to show as the title of the tooltip. | 
+| tip-description | string |  | Coin 7 - under the cove south of the waypoint. | The description text shown under the title. | 
 
-*Allows you to display a tooltip on markers on the minimap or categories in the category dropdown.*
-
-| Attribute | Data Type | Example | Description |
-|-|-|-|-|
-| tip-name | arbitrary text | `tip-name="Golden Coin"` | The text to show as the title of the tooltip. |
-| tip-description | arbitrary text | `tip-description="Coin 7 - under the cove south of the waypoint."` | The description text shown under the title. |
+:::info 
+`tip-name` is implemented on the mini-map but not for categories as a name would be redundant.
+:::
 
 ## Remarks
 
