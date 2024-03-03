@@ -20,5 +20,7 @@ Trail files each represent a trail to be displayed and contain the data necessar
 
 Texture files are simply images used by either markers or trails.  They are included in the marker pack.  A single texture file can be used by multiple markers, trails, etc. and re-use is encouraged to reduce memory requirements, load times, archive size, etc.
 
-## Archive Format
+### Script Files (.lua)
+
+Blish HUD's Pathing module supports LUA scripts which can augment marker packs at runtime.
 
