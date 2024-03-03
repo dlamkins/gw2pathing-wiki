@@ -1,30 +1,27 @@
 ---
 id: specialization
 title: Specialization
+description: Hides the marker or trail if the player is not currently one of the specified specializations.
 hide_table_of_contents: true
 ---
+| Applies To | | Blish HUD (Pathing) | TacO | Burrito |
+|-|-|-|-|-|
+| <center>Markers, Trails</center> | | <center>✔</center> | <center>❌</center> | <center>❌</center> |
 
-| Applies To | | Blish HUD | TacO |
-|-|-|-|-|
-| <center>Markers, Trails</center> | | <center>✔</center> | <center>❌</center> |
 
 ## Description
+Hides the marker or trail if the player is not currently one of the specified specializations.
+| Attribute | Data Type | Default Value | Example | Description |
+|-|-|-|-|-|
+| specialization | integer array |  | 40,61 | The specialization(s) the marker or trail should be shown while using. | 
 
-*Hides the marker or trail if the player is not currently one of the specified specializations.*
-
-| Attribute | Data Type | Example | Description |
-|-|-|-|-|
-| specialization | Array of [Integer](../datatypes/integer) | `specialization="40,61"` | The specialization(s) the marker or trail should be shown while using. |
-
-## Supported values
-
-:::info
-
+:::info 
 The value is checked against the active third slot specialization ID.  It is not limited to elite specializations but we are unable to detect the first two specializations.  This is a quirk of it's implementation in the mumblelink API.
 
 For your convenience, we've bolded the elite specializations in the below table and moved them to the top.  The remaining non-elite specializations can be detected *if* applied in the third specialization slot.
-
 :::
+
+## Supported values
 
 | Value | Specialization | Profession |
 |-|-|-|

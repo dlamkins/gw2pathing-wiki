@@ -1,21 +1,19 @@
 ---
 id: mount
 title: Mount
+description: Hides the marker or trail if the player is not currently riding one of the specified mounts.
 hide_table_of_contents: true
 ---
+| Applies To | | Blish HUD (Pathing) | TacO | Burrito |
+|-|-|-|-|-|
+| <center>Markers, Trails</center> | | <center>✔</center> | <center>❌</center> | <center>❌</center> |
 
-| Applies To | | Blish HUD | TacO |
-|-|-|-|-|
-| <center>Markers, Trails</center> | | <center>✔</center> | <center>❌</center> |
 
 ## Description
-
-*Hides the marker or trail if the player is not currently riding one of the specified mounts.*
-
-| Attribute | Data Type | Example | Description |
-|-|-|-|-|
-| mount | Custom String Array | `mount="jackal,raptor"` | The mount(s) the marker or trail should be shown while riding. |
-
+Hides the marker or trail if the player is not currently riding one of the specified mounts.
+| Attribute | Data Type | Default Value | Example | Description |
+|-|-|-|-|-|
+| mount | string array |  | jackal,raptor | The mount(s) the marker or trail should be shown while riding. | 
 ## Supported values
 
 - jackal

@@ -1,21 +1,19 @@
 ---
 id: profession
 title: Profession
+description: Hides the marker or trail if the player is not currently one of the specified professions.
 hide_table_of_contents: true
 ---
+| Applies To | | Blish HUD (Pathing) | TacO | Burrito |
+|-|-|-|-|-|
+| <center>Trails, Markers</center> | | <center>✔</center> | <center>❌</center> | <center>❌</center> |
 
-| Applies To | | Blish HUD | TacO |
-|-|-|-|-|
-| <center>Markers, Trails</center> | | <center>✔</center> | <center>❌</center> |
 
 ## Description
-
-*Hides the marker or trail if the player is not currently one of the specified professions.*
-
-| Attribute | Data Type | Example | Description |
-|-|-|-|-|
-| profession | Custom String Array | `profession="thief,mesmer"` | The profession(s) the marker or trail should be shown while using. |
-
+Hides the marker or trail if the player is not currently one of the specified professions.
+| Attribute | Data Type | Default Value | Example | Description |
+|-|-|-|-|-|
+| profession | string array |  | thief,mesmer | The profession(s) the marker or trail should be shown while using. | 
 ## Supported values
 
 - guardian

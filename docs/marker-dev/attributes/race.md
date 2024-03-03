@@ -1,21 +1,19 @@
 ---
 id: race
 title: Race
+description: Hides the marker or trail if the player is not currently one of the specified races.
 hide_table_of_contents: true
 ---
+| Applies To | | Blish HUD (Pathing) | TacO | Burrito |
+|-|-|-|-|-|
+| <center>Markers, Trails</center> | | <center>✔</center> | <center>❌</center> | <center>❌</center> |
 
-| Applies To | | Blish HUD | TacO |
-|-|-|-|-|
-| <center>Markers, Trails</center> | | <center>✔</center> | <center>❌</center> |
 
 ## Description
-
-*Hides the marker or trail if the player is not currently one of the specified races.*
-
-| Attribute | Data Type | Example | Description |
-|-|-|-|-|
-| race | Custom String Array | `race="asura,norn"` | The race(s) the marker or trail should be shown while using. |
-
+Hides the marker or trail if the player is not currently one of the specified races.
+| Attribute | Data Type | Default Value | Example | Description |
+|-|-|-|-|-|
+| race | string array |  | asura,norn | The race(s) the marker or trail should be shown while using. | 
 ## Supported values
 
 - asura

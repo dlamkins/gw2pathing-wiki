@@ -1,27 +1,23 @@
 ---
 id: behavior
 title: Behavior
+description: Enables one of several predefined behaviors when triggered.
 hide_table_of_contents: true
 ---
+| Applies To | | Blish HUD (Pathing) | TacO | Burrito |
+|-|-|-|-|-|
+| <center>Markers</center> | | <center>✔</center> | <center>✔</center> | <center>❌</center> |
 
-| Applies To | | Blish HUD | TacO |
-|-|-|-|-|
-| <center>Markers</center> | | <center>✔</center> | <center>⚠</center> |
 
-:::info
-
-Behavior IDs of 100 and above are Blish HUD specific and will do nothing in TacO.
-
+:::info 
+Behavior IDs of 100 and above are Blish HUD Pathing module specific and will do nothing in TacO.
 :::
 
 ## Description
-
-*Enables one of several predefined behaviors when triggered.*
-
-| Attribute | Data Type | Example | Default Value | Description |
+Enables one of several predefined behaviors when triggered.
+| Attribute | Data Type | Default Value | Example | Description |
 |-|-|-|-|-|
-| behavior | [integer](../datatypes/integer) | `behavior="3"` | 0 | The behavior ID to use. |
-
+| behavior | integer | 0 | 3 | The behavior ID to use. | 
 ## Supported values
 
 | Behavior ID | Name | Behavior Summary |
@@ -30,7 +26,7 @@ Behavior IDs of 100 and above are Blish HUD specific and will do nothing in TacO
 |<center>1</center>| Reappear on map change | The marker hides when triggered until the map is changed. |
 |<center>2</center>| Reappear on daily reset | The marker hides when triggered until daily reset (UTC+0). |
 |<center>3</center>| Only visible before activation | The marker hides when triggered permanently. |
-|<center>4</center>| Reappear After Timer | The marker hides when triggered until the time specified by the [resetlength](resetlength) attribute. |
+|<center>4</center>| Reappear After Timer | The marker hides when triggered until the time specified by the [resetlength](/docs/marker-dev/attributes/resetlength) attribute. |
 |<center>5</center>| Reappear on map reset | *Does nothing.  Not implemented by Blish HUD or TacO.* |
 |<center>6</center>| Once per instance | The marker hides when triggered until the instance is changed (a combination of map ID + shard ID). |
 |<center>7</center>| Once daily per character | The marker hides when triggered until the next day but will show for other characters which have not triggered it yet. |
@@ -39,22 +35,20 @@ Behavior IDs of 100 and above are Blish HUD specific and will do nothing in TacO
 
 ## Triggering
 
-Behaviors activate when they are triggered.  Triggering a marker can be done by pressing the action key while in-range of the marker or by walking within the [TriggerRange](triggerrange) if [AutoTrigger](autotrigger) is enabled.
-
-## Affected by
-
-| Attribute | How |
-|-|-|
-| [AutoTrigger](autotrigger) | If enabled, the marker will trigger when the user enters within the [TriggerRange](triggerrange). |
-| [TriggerRange](triggerrange) | Determines the range necessary to trigger the marker with the action key. |
-| [ResetLength](resetlength) | For behavior 4, the time until the marker becomes visible again. |
-| [InvertBehavior](invertbehavior) | If enabled, the behavior filter is inverted so that the marker is only displayed after the behavior has triggered. |
+Behaviors activate when they are triggered.  Triggering a marker can be done by pressing the action key while in-range of the marker or by walking within the [TriggerRange](/docs/marker-dev/attributes/triggerrange) if [AutoTrigger](/docs/marker-dev/attributes/autotrigger) is enabled.
 
 ## Keeping states
 
-Behavior states are tracked by a [GUID](guid).  Between launches, this information is saved to disk.
+Behavior states are tracked by a [GUID](/docs/marker-dev/attributes/guid).  Between launches, this information is saved to disk.
 
 | Overlay | File |
 |-|-|
 | Blish HUD | Stored in `\Documents\Guild Wars 2\addons\blishhud\markers\data\states\timers.txt` as `guid,timestamp` pairs. |
 | TacO | Stored in `activationdata.xml` as XML |
+## Affected By
+- [GUID](/docs/marker-dev/attributes/guid)
+- [InvertBehavior](/docs/marker-dev/attributes/invertbehavior)
+- [ResetLength](/docs/marker-dev/attributes/resetlength)
+- [AutoTrigger](/docs/marker-dev/attributes/autotrigger)
+- [TriggerRange](/docs/marker-dev/attributes/triggerrange)
+

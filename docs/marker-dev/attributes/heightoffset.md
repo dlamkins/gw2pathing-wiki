@@ -1,17 +1,17 @@
 ---
 id: heightoffset
 title: HeightOffset
+description: Renders the marker the specified amount higher than the actual position.
 hide_table_of_contents: true
 ---
+| Applies To | | Blish HUD (Pathing) | TacO | Burrito |
+|-|-|-|-|-|
+| <center>Markers</center> | | <center>✔</center> | <center>✔</center> | <center>❌</center> |
 
-| Applies To | | Blish HUD | TacO |
-|-|-|-|-|
-| <center>Markers</center> | | <center>✔</center> | <center>✔</center> |
 
 ## Description
-
-*Renders the marker the specified amount higher than the actual position.*
-
-| Attribute | Data Type | Example | Default Value | Description |
+Renders the marker the specified amount higher than the actual position.
+| Attribute | Data Type | Default Value | Example | Description |
 |-|-|-|-|-|
-| heightoffset | [float](../datatypes/float) | `heightoffset="27.3"` | 1.5 | The amount the marker should be rendered offset, vertically. |
+| heightoffset | float | 1.5 | 27.3 | The amount the marker should be rendered offset from their actual position, vertically. | 
+
