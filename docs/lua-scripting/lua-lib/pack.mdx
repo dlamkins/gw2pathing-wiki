@@ -1,0 +1,53 @@
+---
+id: pack
+title: Pack
+hide_table_of_contents: false
+---
+import CodeHeader from '../../../src/pages/components/CodeHeader';
+
+Pack provides the ability to execute scripts and create markers.
+
+### Functions
+| Function | Description |
+| :----- | ----------- |
+| [`Require`](#require) | Executes the Lua file specified. |
+| [`CreateMarker`](#createmarker) | Creates a new marker within the marker pack. |
+<br/>
+---
+
+### <CodeHeader class="Pack" function="Require" params="path">Pack\:Require</CodeHeader>
+Executes the Lua file specified.
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| `path` | `string` | The relative path to the script. Must be relative to the root of the marker pack.  `.lua` at the end is optional. |
+#### Usage
+```lua title="script.lua"
+Pack:Require("path/to/script")
+```
+<br/>
+---
+
+
+### <CodeHeader class="Pack" function="CreateMarker" params="attributes">Pack\:CreateMarker</CodeHeader>
+Creates a new marker within the marker pack.
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| `attributes` | `table` | The attributes of the marker. |
+
+#### Usage
+```lua title="script.lua"
+local attributes = {
+    xpos = 0,
+    ypos = 0,
+    zpos = 0,
+    iconFile = "path/to/icon.png",
+}
+
+local newMarker = Pack:CreateMarker(attributes)
+```
+<br/>
+---

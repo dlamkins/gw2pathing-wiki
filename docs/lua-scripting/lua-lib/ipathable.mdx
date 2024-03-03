@@ -1,0 +1,65 @@
+---
+id: ipathable
+title: IPathable
+hide_table_of_contents: false
+---
+
+import CodeHeader from '../../../src/pages/components/CodeHeader';
+import ReadOnlyTag from '../../../src/pages/components/ReadOnlyTag';
+
+An interface that defines a pathable object.
+
+### Fields
+| Field | Type | Description |
+| :---- | :--: | ----------- |
+| `Guid` | `any` |  The pathable's GUID. |
+| `Behaviors` | [`IBehavior[]`](ibehavior) |  The behaviors associated with the pathable. |
+| `BehaviorFiltered` | `boolean` | <ReadOnlyTag/> Whether the pathable is actively filtered by a behavior. |
+| `TriggerRange` | `number` |  The pathable's trigger range. |
+| `DistanceToPlayer` | `number` | Distance to the player. |
+| `MapId` | `integer` | <ReadOnlyTag/> The Map ID of the pathable. |
+| `Category` | [`Category`](category) | <ReadOnlyTag/> The category the pathable belongs to. |
+
+### Functions
+| Function | Description |
+| :----- | ----------- |
+| [`Focus`](#ipathablefocus) | Focuses the pathable. |
+| [`Unfocus`](#ipathableunfocus) | Unfocuses the pathable. |
+| [`Interact`](#ipathableinteract) | Triggers the pathable. |
+<br/>
+---
+
+### <CodeHeader class="IPathable" function="Focus" params="">IPathable\:Focus</CodeHeader>
+Focuses the pathable.
+
+#### Usage
+```lua title="script.lua"
+somePathable:Focus()
+```
+<br/>
+---
+
+### <CodeHeader class="IPathable" function="Unfocus" params="">IPathable\:Unfocus</CodeHeader>
+Unfocuses the pathable.
+
+#### Usage
+```lua title="script.lua"
+somePathable:Unfocus()
+```
+<br/>
+---
+
+### <CodeHeader class="IPathable" function="Interact" params="isAutoTriggered">IPathable\:Interact</CodeHeader>
+Triggers the pathable.
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| `isAutoTriggered` | `boolean` | Indicates if the trigger was from an auto trigger or if it was manually triggered. |
+
+#### Usage
+```lua title="script.lua"
+somePathable:Interact(true)
+```
+<br/>
+---

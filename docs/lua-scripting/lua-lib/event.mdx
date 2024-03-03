@@ -1,0 +1,33 @@
+---
+id: event
+title: Event
+hide_table_of_contents: false
+---
+
+import CodeHeader from '../../../src/pages/components/CodeHeader';
+
+Event is a global class that provides the `OnTick` function used to call functions every tick.
+
+### <CodeHeader class="Event" function="OnTick" params="delegate">Event\:OnTick</CodeHeader>
+Registers the provided function with the tick handler. The provided function will be called every tick.
+
+:::warning
+Performing logic every tick can have a big impact on performance, be careful!
+:::
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| `delegate` | `function(gameTime)` | The function to call every tick. |
+:::note
+The provided function should accept the `gameTime` argument to be used with this function
+:::
+
+#### Usage
+```lua title="script.lua"
+local function printEveryTick(gameTime)
+    Debug:Print("tick")
+end
+
+Event:OnTick(printEveryTick)
+```

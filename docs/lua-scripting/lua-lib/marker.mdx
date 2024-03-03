@@ -1,0 +1,323 @@
+---
+id: marker
+title: Marker
+hide_table_of_contents: false
+---
+
+import CodeHeader from '../../../src/pages/components/CodeHeader';
+import OptionalTag from '../../../src/pages/components/OptionalTag';
+import ReadOnlyTag from '../../../src/pages/components/ReadOnlyTag';
+import Accordian from '@mui/material/Accordion';
+import AccordianSummary from '@mui/material/AccordionSummary';
+import AccordianDetails from '@mui/material/AccordionDetails';
+
+A marker pack marker.
+
+:::note
+A majority of these fields simply reflect the marker attributes (any without a description). More information on attributes can be found in the [attributes](/docs/marker-dev/development/attributes.md) section.
+:::
+### Fields
+| Field | Type | Description |
+| :---- | :--: | ----------- |
+| `Alpha` | `number` | |
+| `AutoTrigger` | `boolean` | |
+| `BehaviorFiltered` | `boolean` | [READ-ONLY] Indicates if the marker is actively filtered by a behavior. |
+| `Behaviors` | [`IBehavior[]`](ibehavior) | A list of behaviors attached to the marker. |
+| `CanFade` | `boolean` | |
+| `Category` | [`Category`](category) | [READ-ONLY] The parent category of the marker |
+| `CullDirection` | `integer` | |
+| `DistanceToPlayer` | `number` | |
+| `DrawOrder` | `number` | |
+| `FadeFar` | `number` | |
+| `FadeNear` | `number` | |
+| `Focused` | `boolean` | |
+| `Guid` | `any` | |
+| `HeightOffset` | `number` | |
+| `InGameVisibility` | `any` | |
+| `InvertBehavior` | `boolean` | |
+| `MapDisplaySize` | `number` | |
+| `MapId` | `integer` | [READ-ONLY] |
+| `MapVisibility` | `boolean` | |
+| `MaxSize` | `number` | |
+| `MiniMapVisibility` | `boolean` | |
+| `MinSize` | `number` | |
+| `Position` | [`Vector3`](vector3) | |
+| `ResetLength` | `number` | |
+| `RotationXyz` | [`Vector3`](vector3) | |
+| `ScaleOnMapWithZoom` | `boolean` | |
+| `Size` | `number` | |
+| `Texture` | [`Texture`](texture) | |
+| `Tint` | [`Color`](color) | |
+| `TipDescription` | `string` | |
+| `TipName` | `string` | |
+| `TriggerRange` | `number` | |
+
+### Functions
+| Function | Description |
+| :----- | ----------- |
+| [`Focus`](#markerfocus) | Focuses the marker. |
+| [`Unfocus`](#markerunfocus) | Unfocuses the marker. |
+| [`Interact`](#markerinteract) | Triggers the marker. |
+| [`SetPos(x, y, z)`](#markersetpos) | Sets the x,y,z position of the marker. |
+| [`SetPos(vector)`](#markersetpos-1) | Sets the x,y,z position of the marker. |
+| [`SetPosX`](#markersetposx) | Set the X coordinate of the marker. |
+| [`SetPosY`](#markersetposy) | Set the Y coordinate of the marker. |
+| [`SetPosZ`](#markersetposz) | Set the Z coordinate of the marker. |
+| [`SetRot(x, y, z)`](#markersetrot) | Set the rotation of the marker (in radians). |
+| [`SetRot(vector)`](#markersetrot-1) | Set the rotation of the marker (in radians). |
+| [`SetRotX`](#markersetrotx) | Set the x rotation of the marker (in radians). |
+| [`SetRotY`](#markersetroty) | Set the y rotation of the marker (in radians). |
+| [`SetRotZ`](#markersetroty) | Set the z rotation of the marker (in radians). |
+| [`Remove`](#markerremove) | Removes the marker. |
+| [`SetTexture(texturePath)`](#markersettexture) | Sets the texture of the marker. |
+| [`SetTexture(textureId)`](#markersettexture-1) | Sets the texture of the marker using an asset from the public CDN. |
+| [`GetBehavior`](#markergetbehavior) | Returns any matching behavior by its type name. |
+
+<br/>
+---
+
+### <CodeHeader class="Marker" function="Focus" params="">Marker\:Focus</CodeHeader>
+Focuses the marker.
+
+#### Usage
+```lua title="script.lua"
+some_marker:Focus()
+```
+<br/>
+---
+
+### <CodeHeader class="Marker" function="Unfocus" params="">Marker\:Unfocus</CodeHeader>
+Unfocuses the marker.
+
+#### Usage
+```lua title="script.lua"
+some_marker:Unfocus()
+```
+<br/>
+---
+
+### <CodeHeader class="Marker" function="Interact" params="isAutoTriggered">Marker\:Interact</CodeHeader>
+Triggers the marker.
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| `isAutoTriggered` | `boolean` | Indicates if the trigger was from an auto trigger or if it was manually triggered. |
+
+#### Usage
+```lua title="script.lua"
+some_marker:Interact(true)
+```
+<br/>
+---
+
+### <CodeHeader class="Marker" function="SetPos" params="x, y, z">Marker\:SetPos(x, y, z)</CodeHeader>
+Sets the x,y,z position of the marker.
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| `x` | `number` | The X coordinate to set the marker to. |
+| `y` | `number` | The Y coordinate to set the marker to. |
+| `z` | `number` | The Z coordinate to set the marker to. |
+
+#### Usage
+```lua title="script.lua"
+some_marker:SetPos(0, 0, 0)
+```
+<br/>
+---
+
+### <CodeHeader class="Marker" function="SetPos" params="vector">Marker\:SetPos(vector)</CodeHeader>
+Sets the x,y,z position of the marker.
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| `vector` | `Vector3` | The position to set the marker to. |
+
+#### Usage
+```lua title="script.lua"
+some_marker:SetPos(a_vector_3)
+```
+<br/>
+---
+
+### <CodeHeader class="Marker" function="SetPosX" params="x">Marker\:SetPosX</CodeHeader>
+Set the X coordinate of the marker.
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| `x` | `number` | The X coordinate to set the marker to. |
+
+#### Usage
+```lua title="script.lua"
+some_marker:SetPosX(0)
+```
+<br/>
+---
+
+### <CodeHeader class="Marker" function="SetPosY" params="y">Marker\:SetPosY</CodeHeader>
+Set the Y coordinate of the marker.
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| `y` | `number` | The Y coordinate to set the marker to. |
+
+#### Usage
+```lua title="script.lua"
+some_marker:SetPosY(0)
+```
+<br/>
+---
+
+### <CodeHeader class="Marker" function="SetPosZ" params="z">Marker\:SetPosZ</CodeHeader>
+Set the Z coordinate of the marker.
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| `z` | `number` | The Z coordinate to set the marker to. |
+
+#### Usage
+```lua title="script.lua"
+some_marker:SetPosZ(0)
+```
+<br/>
+---
+
+### <CodeHeader class="Marker" function="SetRot" params="x, y, z">Marker\:SetRot(x, y, z)</CodeHeader>
+Set the rotation of the marker (in radians).
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| `x` | `number` | The X rotation to set the marker to. |
+| `y` | `number` | The Y rotation to set the marker to. |
+| `z` | `number` | The Z rotation to set the marker to. |
+
+#### Usage
+```lua title="script.lua"
+some_marker:SetRot(0, 0, 0)
+```
+<br/>
+---
+
+### <CodeHeader class="Marker" function="SetRot" params="vector">Marker\:SetRot(vector)</CodeHeader>
+Set the rotation of the marker (in radians).
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| `vector` | `Vector3` | The rotation to set the marker to. |
+
+#### Usage
+```lua title="script.lua"
+some_marker:SetRot(a_vector_3)
+```
+<br/>
+---
+
+### <CodeHeader class="Marker" function="SetRotX" params="x">Marker\:SetRotX</CodeHeader>
+Set the x rotation of the marker (in radians).
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| `x` | `number` | The X rotation to set the marker to. |
+
+#### Usage
+```lua title="script.lua"
+some_marker:SetRotX(0)
+```
+<br/>
+---
+
+### <CodeHeader class="Marker" function="SetRotY" params="y">Marker\:SetRotY</CodeHeader>
+Set the y rotation of the marker (in radians).
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| `y` | `number` | The Y rotation to set the marker to. |
+
+#### Usage
+```lua title="script.lua"
+some_marker:SetRotY(0)
+```
+<br/>
+---
+
+### <CodeHeader class="Marker" function="SetRotZ" params="z">Marker\:SetRotZ</CodeHeader>
+Set the z rotation of the marker (in radians).
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| `z` | `number` | The Z rotation to set the marker to. |
+
+#### Usage
+```lua title="script.lua"
+some_marker:SetRotZ(0)
+```
+<br/>
+---
+
+### <CodeHeader class="Marker" function="Remove" params="">Marker\:Remove</CodeHeader>
+Removes the marker.
+
+#### Usage
+```lua title="script.lua"
+some_marker:Remove()
+```
+<br/>
+---
+
+### <CodeHeader class="Marker" function="SetTexture" params="texturePath">Marker\:SetTexture(texturePath)</CodeHeader>
+Sets the texture of the marker.
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| `texturePath` | `string` | The relative path to the texture (relative to the root of the marker pack). |
+
+#### Usage
+```lua title="script.lua"
+some_marker:SetTexture("path/to/texture")
+```
+<br/>
+---
+
+### <CodeHeader class="Marker" function="SetTexture" params="textureId">Marker\:SetTexture(textureId)</CodeHeader>
+Sets the texture of the marker using an asset from the public CDN.
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| `textureId` | `integer` | The relative path to the texture (relative to the root of the marker pack). |
+
+#### Usage
+```lua title="script.lua"
+-- TODO: use a real texture id
+some_marker:SetTexture(123456789)
+```
+<br/>
+---
+
+### <CodeHeader class="Marker" function="GetBehavior" params="behaviorName">Marker\:GetBehavior</CodeHeader>
+Returns any matching behavior by its type name.
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| `behaviorName` | `string` | The name of the behavior type. |
+
+#### Returns | [`IBehavior`](ibehavior) 
+The behavior if found, otherwise `nil`.
+
+#### Usage
+```lua title="script.lua"
+some_marker:GetBehavior("some_behavior")
+```

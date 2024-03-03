@@ -1,0 +1,142 @@
+---
+id: instance
+title: Instance
+hide_table_of_contents: false
+---
+
+import CodeHeader from '../../../src/pages/components/CodeHeader';
+
+Instance is a global class that provides the ability to create new instances of various pathing types, which can then be used in other
+
+### Functions
+| Function | Description |
+| :----- | ----------- |
+| [`Vector3`](#ivector3) | Creates a new [Vector3](vector3). |
+| [`Color`](#icolor) | Creates a new [Color](color). |
+| [`Marker`](#imarker) | Creates a new [Marker](marker). |
+| [`Guid`](#iguid) | Creates a new [Guid](guid). |
+| [`Texture`](#itexture) | Gets a [`Texture`](texture) by Asset ID from the public CDN. |
+| [`Texture`](#itexture-1) | Gets a [`Texture`](texture) from a marker pack. |
+<br/>
+---
+
+### <CodeHeader class="I" function="Vector3" params="x, y, z">I\:Vector3</CodeHeader>
+Creates a new [Vector3](vector3).
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| `x` | `number` | The X coordinate. |
+| `y` | `number` | The Y coordinate. |
+| `z` | `number` | The Z coordinate. |
+
+#### Returns | [`Vector3`](vector3)
+A new vector.
+
+#### Usage
+```lua title="script.lua"
+-- Create new vector for the map origin
+local originPos = I:Vector3(0, 0, 0)
+-- Get players location
+local characterPosition = Mumble.PlayerCharacter.Position
+-- Subtract the two and get the length using the Vector3:Length() function
+local distanceFromOrigin = (characterPosition - originPos):Length()
+
+Debug:Print("Player is " .. distanceFromOrigin .. " units from origin")
+```
+<br/>
+---
+
+
+### <CodeHeader class="I" function="Color" params="r, g, b, a">I\:Color</CodeHeader>
+Creates a new [Color](color).
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| `r` | `integer` | The red component of the color (0 - 255) |
+| `g` | `integer` | The green component of the color (0 - 255) |
+| `b` | `integer` | The blue component of the color (0 - 255) |
+| `a` | `integer` | The alpha component of the color (0 - 255).  255 if no value is provided. |
+
+#### Returns | [`Color`](color)
+A new color.
+
+#### Usage
+```lua title="script.lua"
+local newColor = I:Color(255, 255, 200)
+
+-- TODO: do something interesting with color here
+```
+<br/>
+---
+
+
+### <CodeHeader class="I" function="Marker" params="">I\:Marker</CodeHeader>
+Creates a new [Marker](marker).  
+-- TODO: Is there a usecase where this should be used over `Pack:CreateMarker()`?
+
+<br/>
+---
+
+
+### <CodeHeader class="I" function="Guid" params="base64">I\:Guid</CodeHeader>
+Creates a new [Guid](guid).
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| `base64` | `string` | The base64 encoded Guid. |
+
+#### Returns | [`Guid`](guid)
+A new Guid.
+
+#### Usage
+```lua title="script.lua"
+local newGuid = I:Guid("aWk9ZRjiAUanhexdaUdYWA==")
+
+-- TODO: do something interesting with guid here
+```
+<br/>
+---
+
+
+### <CodeHeader class="I" function="Texture" params="textureID">I\:Texture(textureID)</CodeHeader>
+Gets a [`Texture`](texture) by Asset ID from the public CDN.
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| `textureID` | `integer` | The ID of the asset |
+
+#### Returns | [`Texture`](texture)
+A texture.
+
+#### Usage
+```lua title="script.lua"
+local iconFromID = I:Texture(156909)
+
+-- TODO: do something interesting with texture here (and below)
+```
+<br/>
+---
+
+
+### <CodeHeader class="I" function="Texture" params="pack, texturePath">I\:Texture(pack, texturePath)</CodeHeader>
+Gets a [`Texture`](texture) from a marker pack.
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| `pack` | `Pack` | The current pack |
+| `texturePath` | `string` | The relative path to the texture (relative to the root of the marker pack) |
+
+#### Returns | [`Texture`](texture)
+A texture.
+
+#### Usage
+```lua title="script.lua"
+local textureFromPack = I:Texture(Pack, '/Data/MarkerTextures/someIcon.png')
+```
+
+

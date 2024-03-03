@@ -1,0 +1,115 @@
+---
+id: debug
+title: Debug
+hide_table_of_contents: false
+---
+
+import CodeHeader from '../../../src/pages/components/CodeHeader';
+
+Debug is a global class that provides access to various debugging functions which are useful for testing and debugging your scripts.
+
+:::warning
+Some of these functions can have a notable impact on performance if used in frame or gametick-based functions
+:::
+
+### Functions
+| Function | Description |
+| :----- | ----------- |
+| [`Print`](#debugprint) | Writes a message out to the script console. |
+| [`Warn`](#debugwarn) | Writes a warning out to the script console. |
+| [`Error`](#debugerror) | Writes an error out to the script console. |
+| [`Watch`](#debugwatch) | Adds a static value or a table to the watch panel in the script console. |
+| [`ClearWatch`](#debugclearwatch) | Stops watching a static value or table. |
+
+---
+
+### <CodeHeader class="Debug" function="Print" params="message">Debug\:Print</CodeHeader>
+Writes a message out to the script console.
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| `message` | `string` | The message to write out to the console. |
+
+#### Usage
+```lua title="script.lua"
+Debug:Print("Logging something")
+```
+<br/>
+---
+
+
+
+### <CodeHeader class="Debug" function="Warn" params="message">Debug\:Warn</CodeHeader>
+Writes a warning out to the script console.  
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| `message` | `string` | The warning message to write out to the console. |
+
+#### Usage
+```lua title="script.lua"
+Debug:Warn("Oh no, something happened")
+```
+<br/>
+---
+
+
+
+### <CodeHeader class="Debug" function="Error" params="message">Debug\:Error</CodeHeader>
+Writes an error out to the script console.
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| `message` | `string` | The error message to write out to the console. |
+
+#### Usage
+```lua title="script.lua"
+Debug:Error("Oh no, something very bad happened")
+```
+<br/>
+---
+
+
+### <CodeHeader class="Debug" function="Watch" params="key, value">Debug\:Watch</CodeHeader>
+Adds a static value or a table to the watch panel in the script console.
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| `key` | `string` | The key to show in the watch panel. |
+| `value` | `table` | The value or table to watch. |
+
+#### Usage
+```lua title="script.lua"
+MyTable = {}
+
+Debug:Watch("My Table", MyTable)
+```
+
+TODO: Add watch table pic here
+<br/>
+---
+
+
+
+### <CodeHeader class="Debug" function="ClearWatch" params="key">Debug\:ClearWatch</CodeHeader>
+Stops watching a static value or table.
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| `key` | `string` | The key used when calling `Debug:Watch`. |
+
+#### Usage
+```lua title="script.lua"
+MyTable = {}
+
+Debug:Watch("My Table", MyTable)
+
+-- some time later...
+
+Debug:ClearWatch("My Table")
+```

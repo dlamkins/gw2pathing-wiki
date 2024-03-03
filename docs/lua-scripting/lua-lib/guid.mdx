@@ -1,0 +1,27 @@
+---
+id: guid
+title: GUID
+hide_table_of_contents: true
+---
+
+import CodeHeader from '../../../src/pages/components/CodeHeader';
+
+A unique identifier that is used to identify a resource.
+
+#### Functions
+| Function | Description |
+| :----- | ----------- |
+| [ToBase64](#tobase64) | Returns a base64 string representation of a GUID. |
+<br/>
+---
+
+### <CodeHeader class="Guid" function="ToBase64">Guid:ToBase64</CodeHeader>
+Returns a base64 string representation of a GUID.
+
+#### Returns | `string`
+The base64 string representation of the GUID.
+
+#### Usage
+```lua
+local guid_string = SomeGuid:ToBase64()
+```
