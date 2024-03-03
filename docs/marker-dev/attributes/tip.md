@@ -9,6 +9,7 @@ hide_table_of_contents: true
 | <center>Markers, Category</center> | | <center>✔</center> | <center>❌</center> | <center>❌</center> |
 
 
+
 ## Description
 Allows you to display a tooltip on markers on the minimap or categories in the category dropdown.
 | Attribute | Data Type | Default Value | Example | Description |
@@ -19,6 +20,7 @@ Allows you to display a tooltip on markers on the minimap or categories in the c
 :::info 
 `tip-name` is implemented on the mini-map but not for categories as a name would be redundant.
 :::
+
 
 ## Remarks
 

@@ -9,11 +9,14 @@ hide_table_of_contents: true
 | <center>Markers</center> | | <center>✔</center> | <center>✔</center> | <center>❌</center> |
 
 
+
 ## Description
 Used to indicate a trigger range. This attribute is used by multiple other attributes to define a distance from the marker in which those attributes will activate their functionality or behavior.
 | Attribute | Data Type | Default Value | Example | Description |
 |-|-|-|-|-|
 | triggerrange | float | 2 | 3.2 | The radius from the marker in which the triggerrange is active. | 
+
+
 
 ## Used By
 - [Behavior](/docs/marker-dev/attributes/behavior)

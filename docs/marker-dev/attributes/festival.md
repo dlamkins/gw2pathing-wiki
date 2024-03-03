@@ -13,11 +13,13 @@ hide_table_of_contents: true
 TacO had preliminary support for this feature, but relies on an implementation which no longer works.
 :::
 
+
 ## Description
 Hides the marker or trail if one of the specified festivals is not active.
 | Attribute | Data Type | Default Value | Example | Description |
 |-|-|-|-|-|
 | festival | string array |  | superadventurefestival,wintersday | The festival(s) the marker or trail should be shown during. | 
+
 ## Supported values
 
 - halloween

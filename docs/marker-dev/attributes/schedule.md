@@ -9,12 +9,14 @@ hide_table_of_contents: true
 | <center>Trails, Markers</center> | | <center>✔</center> | <center>❌</center> | <center>❌</center> |
 
 
+
 ## Description
 Hides the marker outside of the specified schedule. Good for showing markers only during their associated scheduled meta event, day of the week, etc. All scheduling is based on UTC.
 | Attribute | Data Type | Default Value | Example | Description |
 |-|-|-|-|-|
 | schedule | string |  | 0 0 * * 2 | 	A cron expression which represents the start time of when the marker or trail should be shown. | 
 | schedule-duration | float |  | 1440 | The duration after the start time that the marker or trail should remain visible. | 
+
 ## Supported values
 
 ### schedule

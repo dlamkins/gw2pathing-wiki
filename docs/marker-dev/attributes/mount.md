@@ -9,11 +9,13 @@ hide_table_of_contents: true
 | <center>Markers, Trails</center> | | <center>✔</center> | <center>❌</center> | <center>❌</center> |
 
 
+
 ## Description
 Hides the marker or trail if the player is not currently riding one of the specified mounts.
 | Attribute | Data Type | Default Value | Example | Description |
 |-|-|-|-|-|
 | mount | string array |  | jackal,raptor | The mount(s) the marker or trail should be shown while riding. | 
+
 ## Supported values
 
 - jackal
