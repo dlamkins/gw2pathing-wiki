@@ -6,7 +6,7 @@ hide_table_of_contents: true
 ---
 | Applies To | | Blish HUD (Pathing) | TacO | Burrito |
 |-|-|-|-|-|
-| <center>Markers</center> | | <center>✔</center> | <center>✔</center> | <center>❌</center> |
+| <center>Markers</center> | | <center>✔</center> | <center>✔</center> | <center>✔</center> |
 
 
 
