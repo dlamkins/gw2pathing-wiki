@@ -4,13 +4,130 @@ title: Creating a Script Menu
 hide_table_of_contents: false
 ---
 
-In this example, we'll build out an example menu with various functions
-```lua title="menu.lua"
+In this tutorial, we'll build out an example menu with various submenus and functions.
+
+### Creating a New Script
+
+Using what we learned from `TriggerFunction.lua` let's make a new script that spawns a marker on the player, and can be triggered from the script menu.
+
+:::tip
+The mumble coordinates have the Y and Z axis swapped, so be careful if you use it to set the position of a marker!
+:::
+
+```lua title="/Data/ExamplePack/Scripts/SpawnMarker.lua"
+ExamplePack.SpawnMarker = {
+    -- Instead of a table, we'll just keep track of one spawned marker
+    -- highlight-next-line
+    spawnedMarker = nil,
+    category = World:CategoryByType("ep.marker.category")
+}
+
+Debug:Watch("SpawnMarker", ExamplePack.SpawnMarker)
+
+-- Don't need to pass any params anymore
+-- highlight-next-line
+local function spawnNewMarker()
+    -- We'll use the Mumble global to get the players position
+    -- highlight-next-line
+    local playerPos = Mumble.PlayerCharacter.Position
+    local new_marker_attr = {   
+        MapVisibility = false,
+        InGameVisibility = true,
+        Category = ExamplePack.SpawnMarker.category,
+        -- Note the swapped Z and Y!
+        -- highlight-start
+        xpos = playerPos.X,
+        ypos = playerPos.Z,
+        zpos = playerPos.Y,
+        -- highlight-end
+        iconFile = "Data/ExamplePack/Markers/MarkerIcon.png",
+    }
+    -- We can just directly store the marker now
+    -- highlight-next-line
+    ExamplePack.SpawnMarker.spawnedMarker = Pack:CreateMarker(new_marker_attr)
+end
+
+-- Don't need to pass any params anymore, we'll just directly remove the marker
+-- highlight-start
+local function removeNewMarker()
+    if ExamplePack.SpawnMarker.spawnedMarker ~= nil then
+        ExamplePack.SpawnMarker.spawnedMarker:Remove()
+        ExamplePack.SpawnMarker.spawnedMarker = nil
+-- highlight-end
+    end
+end
+
+
+-- No params needed anymore
+-- highlight-next-line
+function EP_SpawnMarker()
+    -- Now we can just perform the check here and offload the logic to the new functions
+    -- highlight-start
+    if ExamplePack.SpawnMarker.spawnedMarker ~= nil then
+        removeNewMarker()
+    -- highlight-end
+    else
+        -- highlight-next-line
+        spawnNewMarker()
+    end
+
+end
+```
+
+Nice work! Now we have a global function that should be able to spawn a marker on the player's position, and remove it if it already exists.
+
+### Creating the Menu
+
+The most important concept to understand when creating menus is that you're essentially just nesting them within each other.
+
+The global `Menu` object is the root of all menus, and you add onto it by calling `Menu:Add`. This function returns a new `Menu` object, which you can then add submenus or functions to, and so on.
+
+Let's create a root menu for our pack, and then add a few submenu's to it.
+
+```lua title="/Data/ExamplePack/Scripts/menu.lua"
+-- To do something when a menu is clicked, we need to have OnClick functions...let's make a few
+-- This is a simple function that logs a message to the debug console, 
+-- Note that it takes a menu as a parameter, a requirement for OnClick functions
+local function logPrint(menu)
+    Debug:Print("This is a log message from the menu!")
+end
+
+-- This function will log whether the checkbox is checked or not
+local function checkStatus(menu)
+    Debug:Print("Checkbox is currently: " .. tostring(menu.Checked))
+end
+
+-- This function will trigger our global SpawnMarker function
+local function spawnMarker(menu)
+    EP_SpawnMarker()
+end
+
+-- Now let's build our menu
+-- This is our root menu
 local rootMenu = Menu:Add("Example Menu", nil)
 
-local subMenu1 = rootMenu:Add("Sub Menu", logPrint, false, false, "Logs a message to the debug console")
+-- Here we add a menu item to the root menu, and assign the logPrint function to it
+local subMenu1 = rootMenu:Add("Log to Console", logPrint, false, false, "Logs a message to the debug console")
 
+-- Here we add a submenu to the root menu
 local subMenu2WithChildren = rootMenu:Add("Cool Script Functions", nil, false, false, "Contains some cool script functions")
-local childMenu1 = subMenu2WithChildren:Add("Cool Function", coolFunction, true, false, "This function logs whether it is checked or not")
-local childMenu2 = subMenu2WithChildren:Add("Global Function", globalFunction, false, false, "This function triggers a global function from another file")
+-- Here we add a few menu items to the submenu to trigger our other functions
+local childMenu1 = subMenu2WithChildren:Add("Checkbox Function", checkStatus, true, false, "This function logs whether it is checked or not")
+local childMenu2 = subMenu2WithChildren:Add("Spawn Marker", spawnMarker, false, false, "This function will spawn a marker on the player, or remove it if it already was spawned")
 ```
+
+With this we have the basis of a simple menu. Now all we need to do is add the scripts to our `pack.lua`, and we should be able to see the menu in game!
+
+### Adding the Menu to the `pack.lua`
+
+```lua title="pack.lua"
+ExamplePack = {}
+
+Pack:Require("Data/ExamplePack/Scripts/SpawnMarker.lua")
+-- Note, the menu must be loaded after any of the global functions it references. This is the same for any other script that references global functions.
+Pack:Require("Data/ExamplePack/Scripts/menu.lua")
+```
+
+Now when you load into the game, you should see a "Scripts" menu in the Pathing icon menu, and you can navigate through it to test out the submenus and functions we've added!
+
+Congrats on creating your first script menu! 🎉
