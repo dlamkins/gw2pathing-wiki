@@ -103,7 +103,17 @@ const sidebars = {
       label: 'Lua Scripting',
       items: [
         "lua-scripting/lua-basics/intro",
-        "lua-scripting/lua-basics/lua", 
+        {
+          type: 'category',
+          label: 'Tutorials',
+          items: [
+            'lua-scripting/lua-tutorials/getting-started',
+            'lua-scripting/lua-tutorials/exploring-attributes',
+            'lua-scripting/lua-tutorials/using-the-api',
+            'lua-scripting/lua-tutorials/creating-a-marker',
+            'lua-scripting/lua-tutorials/creating-a-script-menu',
+          ],
+        },
         {
           type: 'category',
           label: "Pathing API",
@@ -122,7 +132,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Global Classes and Functions',
+              label: 'Globals',
               items: [
                 'lua-scripting/lua-lib/debug',
                 'lua-scripting/lua-lib/event',
@@ -150,18 +160,6 @@ const sidebars = {
                 'lua-scripting/lua-lib/vector3',
               ],
             }
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Tutorials',
-          items: [
-            'lua-scripting/lua-tutorials/getting-started',
-            'lua-scripting/lua-tutorials/hello-world',
-            'lua-scripting/lua-tutorials/exploring-attributes',
-            'lua-scripting/lua-tutorials/using-the-api',
-            'lua-scripting/lua-tutorials/creating-a-marker',
-            'lua-scripting/lua-tutorials/creating-a-script-menu',
           ],
         }
       ]
