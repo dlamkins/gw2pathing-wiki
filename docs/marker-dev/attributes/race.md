@@ -9,11 +9,13 @@ hide_table_of_contents: true
 | <center>Markers, Trails</center> | | <center>✔</center> | <center>❌</center> | <center>❌</center> |
 
 
+
 ## Description
 Hides the marker or trail if the player is not currently one of the specified races.
 | Attribute | Data Type | Default Value | Example | Description |
 |-|-|-|-|-|
 | race | string array |  | asura,norn | The race(s) the marker or trail should be shown while using. | 
+
 ## Supported values
 
 - asura

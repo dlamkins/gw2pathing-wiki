@@ -13,11 +13,13 @@ hide_table_of_contents: true
 Behavior IDs of 100 and above are Blish HUD Pathing module specific and will do nothing in TacO.
 :::
 
+
 ## Description
 Enables one of several predefined behaviors when triggered.
 | Attribute | Data Type | Default Value | Example | Description |
 |-|-|-|-|-|
 | behavior | integer | 0 | 3 | The behavior ID to use. | 
+
 ## Supported values
 
 | Behavior ID | Name | Behavior Summary |
@@ -45,6 +47,7 @@ Behavior states are tracked by a [GUID](/docs/marker-dev/attributes/guid).  Betw
 |-|-|
 | Blish HUD | Stored in `\Documents\Guild Wars 2\addons\blishhud\markers\data\states\timers.txt` as `guid,timestamp` pairs. |
 | TacO | Stored in `activationdata.xml` as XML |
+
 ## Affected By
 - [GUID](/docs/marker-dev/attributes/guid)
 - [InvertBehavior](/docs/marker-dev/attributes/invertbehavior)

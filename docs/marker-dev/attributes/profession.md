@@ -9,11 +9,13 @@ hide_table_of_contents: true
 | <center>Trails, Markers</center> | | <center>✔</center> | <center>❌</center> | <center>❌</center> |
 
 
+
 ## Description
 Hides the marker or trail if the player is not currently one of the specified professions.
 | Attribute | Data Type | Default Value | Example | Description |
 |-|-|-|-|-|
 | profession | string array |  | thief,mesmer | The profession(s) the marker or trail should be shown while using. | 
+
 ## Supported values
 
 - guardian

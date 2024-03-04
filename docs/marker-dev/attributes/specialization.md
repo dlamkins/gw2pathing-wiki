@@ -9,6 +9,7 @@ hide_table_of_contents: true
 | <center>Markers, Trails</center> | | <center>✔</center> | <center>❌</center> | <center>❌</center> |
 
 
+
 ## Description
 Hides the marker or trail if the player is not currently one of the specified specializations.
 | Attribute | Data Type | Default Value | Example | Description |
@@ -20,6 +21,7 @@ The value is checked against the active third slot specialization ID.  It is not
 
 For your convenience, we've bolded the elite specializations in the below table and moved them to the top.  The remaining non-elite specializations can be detected *if* applied in the third specialization slot.
 :::
+
 
 ## Supported values
 

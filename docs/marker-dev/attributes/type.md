@@ -6,7 +6,8 @@ hide_table_of_contents: true
 ---
 | Applies To | | Blish HUD (Pathing) | TacO | Burrito |
 |-|-|-|-|-|
-| <center>Markers, Trails</center> | | <center>✔</center> | <center>✔</center> | <center>❌</center> |
+| <center>Markers, Trails</center> | | <center>✔</center> | <center>✔</center> | <center>✔</center> |
+
 
 
 ## Description
@@ -14,6 +15,7 @@ Indicates which category a marker or trail belongs to. The type represents the t
 | Attribute | Data Type | Default Value | Example | Description |
 |-|-|-|-|-|
 | type | string |  | mypack.adventures.tickletrahearne | The category that the marker or trail belongs to. | 
+
 ## Example
 
 The above category example `mypack.adventures.tickletrahearne` represents the same `MarkerCategory` structure shown below.

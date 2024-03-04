@@ -15,12 +15,14 @@ For this feature to work, the user must have given Blish HUD and the Pathing mod
 If the user does not provide an API key or the user has not consented to the `account` and `progression` items, then markers and trails marked with this attribute will not be automatically hidden.
 :::
 
+
 ## Description
 Hides markers and trails based on their associated completion status reported by the web API.
 | Attribute | Data Type | Default Value | Example | Description |
 |-|-|-|-|-|
 | achievementid | integer |  | 4949 | The achievement this marker or trail will hide for when completed. | 
 | achievementbit | integer |  | 3 | The id of the sub item within an achievement this marker or trail will hide for when completed. | 
+
 ## Supported values
 ### achievementid
 
@@ -37,11 +39,12 @@ The bits are 0 indexed meaning that they count from 0 onwards so if there are 4 
 
 `achievementbit` is not required and when not specified, the marker or trail will be toggled based exclusively on the status of the parent achievement, itself.
 
-A great way to find achievement IDs and other details is via [gw2treasures.com's achievement search](https://en.gw2treasures.com/achievement) by mousing over the individual achievement items.
+A great way to find achievement IDs and other details is via [gw2treasures.com's achievement search](https://en.gw2treasures.com/achievement).  There you can enable the "Index" column for the objectives table on the achievements page to show the correct bit index to use as `achievementbit`.
 
 :::warning 
 **Do not** trust the order of the Wiki or the in-game achievement UI. This order does not necessarily represent the order provided by the API.
 :::
+
 
 ## Affected By
 - [AutoTrigger](/docs/marker-dev/attributes/autotrigger)

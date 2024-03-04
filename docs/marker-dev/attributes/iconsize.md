@@ -9,9 +9,11 @@ hide_table_of_contents: true
 | <center>Markers</center> | | <center>✔</center> | <center>✔</center> | <center>❌</center> |
 
 
+
 ## Description
 Indicates the size of the marker.
 | Attribute | Data Type | Default Value | Example | Description |
 |-|-|-|-|-|
 | iconsize | float | 1 | 2 | The size the marker should be. | 
+
 

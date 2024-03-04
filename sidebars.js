@@ -7,8 +7,7 @@
 const sidebars = {
   "usage-sidebar": {
     "User Guide": [
-      "usage/markers",
-      "usage/managingmarkers",
+      "usage/markers"
     ],
   },
   "marker-dev-sidebar": [
@@ -48,6 +47,7 @@ const sidebars = {
                 "marker-dev/attributes/iconsize",
                 "marker-dev/attributes/info",
                 "marker-dev/attributes/invertbehavior",
+                "marker-dev/attributes/ishidden",
                 "marker-dev/attributes/isseparator",
                 "marker-dev/attributes/iswall",
                 "marker-dev/attributes/mapdisplaysize",
@@ -69,6 +69,7 @@ const sidebars = {
                 "marker-dev/attributes/texture",
                 "marker-dev/attributes/tip",
                 "marker-dev/attributes/toggle",
+                "marker-dev/attributes/traildata",
                 "marker-dev/attributes/trailscale",
                 "marker-dev/attributes/triggerrange",
                 "marker-dev/attributes/type",
