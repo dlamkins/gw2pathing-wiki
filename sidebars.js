@@ -7,8 +7,7 @@
 const sidebars = {
   "usage-sidebar": {
     "User Guide": [
-      "usage/markers",
-      "usage/managingmarkers",
+      "usage/markers"
     ],
   },
   "marker-dev-sidebar": [
