@@ -112,6 +112,7 @@ const sidebars = {
             'lua-scripting/lua-tutorials/using-the-api',
             'lua-scripting/lua-tutorials/creating-a-marker',
             'lua-scripting/lua-tutorials/creating-a-script-menu',
+            'lua-scripting/lua-tutorials/whats-next',
           ],
         },
         {
