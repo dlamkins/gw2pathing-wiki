@@ -69,7 +69,7 @@ function Row(props) {
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  {row.functions.map((functionRow) => (
+                  {row.functions && row.functions.map((functionRow) => (
                     <TableRow key={functionRow.name}>
                       <TableCell component="th" scope="row">
                         <a href={functionRow.link}><code style={{backgroundColor: '#2d2e2d'}}>{functionRow.name}</code></a>
@@ -114,7 +114,7 @@ export default function CollapsibleTable(props) {
                 </TableRow>
                 </TableHead>
                 <TableBody style={{padding: 0}}>
-                {props.rows.map((row) => (
+                {props.rows && props.rows.map((row) => (
                     <Row key={row.class} row={row} />
                 ))}
                 </TableBody>
