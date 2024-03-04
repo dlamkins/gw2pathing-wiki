@@ -23,12 +23,20 @@ Here's an example of a marker with a Script Attribute:
 <Tabs>
     <TabItem value="xml" label="pack.xml">
     ```xml title="pack.xml"
-        <marker ... script-once="SaySomething(Woah!)" guid="aWk9ZRjiAUanhexdaUdYWA=="/>
+    <POI ... script-once="SaySomething(Woah!)" guid="aWk9ZRjiAUanhexdaUdYWA=="/>
     ```
     </TabItem>
 
-    <TabItem value="lua" label="script.lua">
-    ```lua title="script.lua"
+    <TabItem value="pack-lua" label="pack.lua">
+    ```lua title="pack.lua"
+    -- The script must be required in order to be used
+    Pack:Require("/Data/ExamplePack/Scripts/script.lua")
+    ```
+    </TabItem>
+
+    <TabItem value="script-lua" label="script.lua">
+    ```lua title="/Data/ExamplePack/Scripts/script.lua"
+    -- Notice we use the default `marker` parameter, then our own custom `message` parameter
     function SaySomething(marker, message)
         Debug:Print("Message from marker " .. marker.Guid .. ": " .. message)
     end

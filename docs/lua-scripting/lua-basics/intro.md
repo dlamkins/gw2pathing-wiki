@@ -33,10 +33,6 @@ While I will cover the basics that are important to know when working with the P
 ## The Pathing API
 The Pathing API is a set of functions and objects that are available to you when you are working on scripts. These functions and objects are what allow you to interact with the Pathing module and create your own custom behaviors. We will cover these in more detail later on, but for now, just know that these are the tools you will be using to create your custom behaviors.
 
-You can find the full list of available functions and objects in the [Pathing API Reference](/docs/lua-scripting/lua-lib/api_intro), but I wouldn't recommend diving into that just yet. It's a lot to take in, and it's better to learn as you go.
-<br/>
----
+You can find the full list of available functions and objects in the [Pathing API Reference](/docs/lua-scripting/lua-lib/api_intro). If you want, you can go take some time to read through the overview there, or you can head straight to the tutorials and read through the overview as it's mentioned.
 
-## Next Steps
-If you're ready to step into the world of scripting, head on over to the [Getting Started](/docs/lua-scripting/lua-tutorials/getting-started) tutorial to get your environment set up and start writing your first script!
 
