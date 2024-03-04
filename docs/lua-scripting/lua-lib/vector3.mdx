@@ -1,0 +1,88 @@
+---
+id: vector3
+title: Vector3
+hide_table_of_contents: false
+---
+
+import CodeHeader from '../../../src/pages/components/CodeHeader';
+
+A 3D vector. Has built in functions for vector operations (addition, subtraction, multiplication, etc).
+
+### Fields
+| Field | Type | Description |
+| :---- | :--: | ----------- |
+| `X` | `number` | The X component of the vector. |
+| `Y` | `number` | The Y component of the vector. |
+| `Z` | `number` | The Z component of the vector. |
+
+### Functions
+| Function | Description |
+| :----- | ----------- |
+| [`Length`](#vector3length) | Calculates the length of a vector. |
+| [`Dot`](#vector3dot) | Returns the dot product of this vector and another. |
+| [`Normalize`](#vector3normalize) | Normalizes the vector. |
+| [`Cross`](#vector3cross) | Returns the cross product of this vector and another. |
+<br/>
+---
+
+### <CodeHeader class="Vector3" function="Length">Vector3\:Length</CodeHeader>
+Calculates the length of a vector.
+
+#### Returns | `number`
+The length of the vector.
+
+#### Usage
+```lua title="script.lua"
+local distance = (VectorA - VectorB):Length()
+```
+<br/>
+---
+
+### <CodeHeader class="Vector3" function="Dot" params="vector3">Vector3\:Dot</CodeHeader>
+Returns the dot product of this vector and another.
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| vector3 | [`Vector3`](#1) | The other vector. |
+
+#### Returns | `number
+The dot product of the two vectors.
+
+#### Usage
+```lua title="script.lua"
+local dotProduct = VectorA:Dot(VectorB)
+```
+<br/>
+---
+
+### <CodeHeader class="Vector3" function="Normalize">Vector3\:Normalize</CodeHeader>
+Normalizes the vector.
+
+#### Returns | `Vector3`
+The normalized vector.
+
+#### Usage
+```lua title="script.lua"
+local normalizedVector = VectorA:Normalize()
+```
+<br/>
+---
+
+### <CodeHeader class="Vector3" function="Cross" params="vector3">Vector3\:Cross</CodeHeader>
+Returns the cross product of this vector and another.
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| vector3 | [`Vector3`](#1) | The other vector. |
+
+#### Returns | `Vector3`
+The cross product of the two vectors.
+
+#### Usage
+```lua title="script.lua"
+local crossProduct = VectorA:Cross(VectorB)
+```
+<br/>
+---

@@ -1,0 +1,168 @@
+---
+id: mumble
+title: Mumble
+hide_table_of_contents: false
+toc_max_heading_level: 4
+---
+
+import CodeHeader from '../../../src/pages/components/CodeHeader';
+
+The Mumble class provides access to all mumble information, provided in the form of various classes, enums and fields.
+
+:::tip
+You can find a tutorial on using mumble info in the tutorials section!
+:::
+
+### Fields
+| Field | Type | Description |
+| :--- | :---: | --- |
+| `CurrentMap` | [`MumbleCurrentMap`](#mumblecurrentmap) | Contains information about the current map |
+| `CurrentMumbleMapName` | `string` | The name of the current map |
+| `Info` | [`MumbleInfo`](#mumbleinfo) | Contains information about the game |
+| `IsAvailable` | `boolean` | Indicates if the Mumble API is currently available |
+| `PlayerCamera` | [`MumblePlayerCamera`](#mumbleplayercamera) | Contains information about the player camera |
+| `PlayerCharacter` | [`MumblePlayerCharacter`](#mumbleplayercharacter) | Contains information about the player character |
+| `Tick` | `integer` | The current tick (?) TODO: Ask Snow if this is accurate? |
+| `TimeSinceTick` | [`TimeSpan`](gametime#timespan) | Contains the time since the last tick |
+| `UI` | [`MumbleUi`](#mumbleui) | Contains information about the UI |
+<br/>
+---
+
+### <CodeHeader class="MumbleCurrentMap">MumbleCurrentMap</CodeHeader>
+A class that contains info about the current map.
+
+__Fields__
+| Field | Type | Description |
+| :--- | :---: | --- |
+| `Id` | `integer` | The map ID |
+| `IsCompetitiveMode` | `boolean` | If the current map is a competitive map |
+| `Type` | [`MumbleMapType`](#mumblemaptype) | The type of the current map |
+
+#### <CodeHeader class="MumbleMapType (enum)">MumbleMapType</CodeHeader>
+| Map Type | Enum Value |
+| --- | ---: |
+| Unknown | -1 |
+| Redirect | 0 |
+| CharacterCreate | 1 |
+| Pvp | 2 |
+| Gvg | 3 |
+| Instance | 4 |
+| Public | 5 |
+| Tournament | 6 |
+| Tutorial | 7 |
+| UserTournament | 8 |
+| Center | 9 |
+| ExternalBattlegrounds | 9 |
+| BlueHome | 10 |
+| BlueBorderlands | 10 |
+| GreenHome | 11 |
+| GreenBorderlands | 11 |
+| RedHome | 12 |
+| RedBorderlands | 12 |
+| FortunesVale | 13 |
+| JumpPuzzle | 14 |
+| ObsidianSanctum | 14 |
+| EdgeOfTheMists | 15 |
+| PublicMini | 16 |
+| WvwLounge | 18 |
+<br/>
+---
+
+### <CodeHeader class="MumbleInfo">MumbleInfo</CodeHeader>
+A class that contains info about the game.
+
+__Fields__
+| Field | Type | Description |
+| :--- | :---: | --- |
+| `BuildId` | `integer` | The current build ID of the game |
+| `IsGameFocused` | `boolean` | Indicates if the game is actively focused |
+<br/>
+---
+
+
+### <CodeHeader class="MumblePlayerCamera">MumblePlayerCamera</CodeHeader>
+A class that contains information about the player camera.
+
+__Fields__
+| Field | Type | Description |
+| :--- | :---: | --- |
+| `FarPlaneRenderDistance` | `number` | TODO: Ask Snow |
+| `FieldOfView` | `number` | The camera's FoV |
+| `Forward` | [`Vector3`](vector3) | The camera's forward vector |
+| `NearPlaneRenderDistance` | `number` | TODO: Ask Snow |
+| `Position` | [`Vector3`](vector3) | The camera position |
+<br/>
+---
+
+
+### <CodeHeader class="MumblePlayerCharacter">MumblePlayerCharacter</CodeHeader>
+A class that contains information about the player character.
+
+__Fields__
+| Field | Type | Description |
+| :--- | :---: | --- |
+| `CurrentMount` | [`MumbleMountType`](#mumblemounttype) | The player's current mount |
+| `Forward` | [`Vector3`](vector3) | The character's forward vector |
+| `IsCommander` | `boolean` | Indicates if the player has a commander tag enabled |
+| `IsInCombat` | `boolean` | Indicates if the player is actively in combat |
+| `Name` | `string` | The character name |
+| `Position` | [`Vector3`](vector3) | The character's position |
+| `Race` | [`MumbleRaceType`](#mumbleracetype) | The character's race |
+| `Specialization` | `integer` | The ID of the character's specialization |
+| `TeamColorId` | `integer` | The player's team color ID |
+
+#### <CodeHeader class="MumbleMountType (enum)">MumbleMountType</CodeHeader>
+| Mount | Value |
+| --- | ---: |
+| None | 0 |
+| Jackal | 1 |
+| Griffon | 2 |
+| Springer | 3 |
+| Skimmer | 4 |
+| Raptor | 5 |
+| RollerBeetle | 6 |
+| Warclaw | 7 |
+| Skyscale | 8 |
+| Skiff | 9 |
+| SiegeTurtle | 10
+
+#### <CodeHeader class="MumbleRaceType (enum)">MumbleRaceType</CodeHeader>
+| Race | Value |
+| --- | ---: |
+| Asura | 0 |
+| Charr | 1 |
+| Human | 2 |
+| Norn | 3 |
+| Sylvari | 4 |
+<br/>
+---
+
+
+### <CodeHeader class="MumbleUi">MumbleUi</CodeHeader>
+A class that contains information about the UI.
+
+__Fields__
+| Field | Type | Description |
+| :--- | :---: | --- |
+| `CompassRotation` | `number` | The compass' rotation |
+| `CompassSize` | `any` | The size of the compass |
+| `IsCompassRotationEnabled` | `boolean` | Indicates if the compass has rotation enabled |
+| `IsCompassTopRight` | `boolean` | Indicates if the compass is shown in the top right |
+| `IsMapOpen` | `boolean` | Indicates if the map is open fullscreen |
+| `IsTextInputFocused` | `boolean` | Indicates if a textbox is focused in-game (does not include the trading post search or some other textboxes) |
+| `MapCenter` | `any` | The center of the map |
+| `MapPosition` | `any` | The position the map is currently set to |
+| `MapScale` | `number` | The current map zoom |
+| `UISize` | [`MumbleUiSize`](#mumbleuisize) | The in-game UI scale |
+
+#### <CodeHeader class="MumbleUiSize (enum)">MumbleUiSize</CodeHeader>
+| Race | Value |
+| --- | ---: |
+| Small | 0 |
+| Normal | 1 |
+| Large | 2 |
+| Larger | 3 |
+
+<br/>
+---
+

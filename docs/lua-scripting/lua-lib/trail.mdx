@@ -1,0 +1,113 @@
+---
+id: trail
+title: Trail
+hide_table_of_contents: false
+---
+
+import CodeHeader from '../../../src/pages/components/CodeHeader';
+import OptionalTag from '../../../src/pages/components/OptionalTag';
+import ReadOnlyTag from '../../../src/pages/components/ReadOnlyTag';
+
+A marker pack trail.
+
+:::note
+A majority of these fields simply reflect the trail attributes (any without a description). More information on attributes can be found in the [attributes](/docs/marker-dev/development/attributes.md) section.
+:::
+
+### Fields
+| Field | Type | Description |
+| :---- | :--: | ----------- |
+| `Alpha` | `number` |  |
+| `AnimationSpeed` | `number` |  |
+| `BehaviorFiltered` | `boolean` | <ReadOnlyTag/> Indicates if the trail is actively filtered by a behavior. |
+| `Behaviors` | [`IBehavior[]`](ibehavior) | A table of this trails behaviors. |
+| `CanFade` | `boolean` |  |
+| `Category` | [`Category`](category) | <ReadOnlyTag/> The parent category of this trail. |
+| `CullDirection` | `integer` |  |
+| `FadeFar` | `number` |  |
+| `FadeNear` | `number` |  |
+| `Guid` | `any` |  |
+| `InGameVisibility` | `any` |  |
+| `IsWall` | `boolean` |  |
+| `MapId` | `integer` | <ReadOnlyTag/> |
+| `MapVisibility` | `boolean` |  |
+| `MiniMapVisibility` | `boolean` |  |
+| `ResetLength` | `number` |  |
+| `Texture` | [`Texture`](texture) |  |
+| `Tint` | [`Color`](color) |  |
+| `TrailSampleColor` | [`Color`](color) | The color of the trail on the minimap. |
+| `TrailScale` | `number` |  |
+| `TriggerRange` | `number` |  |
+
+### Functions
+| Function | Description |
+| :----- | ----------- |
+| [`Focus`](#trailfocus) | Focuses the trail. |
+| [`Interact`](#trailinteract) | Triggers the trail. |
+| [`Unfocus`](#trailunfocus) | Unfocuses the trail. |
+| [`Remove`](#trailremove) | Removes the trail. |
+| [`GetBehavior`](#trailgetbehavior) | Returns any matching behavior by its type name. |
+
+<br/>
+---
+
+### <CodeHeader class="Trail" function="Focus" params="">Trail\:Focus</CodeHeader>
+Focuses the trail.
+
+#### Usage
+```lua title="script.lua"
+someTrail:Focus()
+```
+<br/>
+---
+
+### <CodeHeader class="Trail" function="Interact" params="isAutoTriggered">Trail\:Interact</CodeHeader>
+Triggers the trail.
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------: | :--- | ----------- |
+| `isAutoTriggered` | `boolean` | Indicates if the trigger was from an auto trigger or if it was manually triggered. |
+
+#### Usage
+```lua title="script.lua"
+someTrail:Interact(true)
+```
+<br/>
+---
+
+### <CodeHeader class="Trail" function="Unfocus" params="">Trail\:Unfocus</CodeHeader>
+Unfocuses the trail.
+
+#### Usage
+```lua title="script.lua"
+someTrail:Unfocus()
+```
+<br/>
+---
+
+### <CodeHeader class="Trail" function="Remove" params="">Trail\:Remove</CodeHeader>
+Removes the trail.
+
+#### Usage
+```lua title="script.lua"
+someTrail:Remove()
+```
+<br/>
+---
+
+### <CodeHeader class="Trail" function="GetBehavior" params="behaviorName">Trail\:GetBehavior</CodeHeader>
+Returns any matching behavior by its type name.
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------: | :--- | ----------- |
+| `behaviorName` | `string` | The name of the behavior type. |
+
+#### Returns | [`IBehavior`](ibehavior)
+The behavior.
+
+#### Usage
+```lua title="script.lua"
+local aBehavior = someTrail:GetBehavior("someBehaviorName")
+```

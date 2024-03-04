@@ -103,8 +103,9 @@ const config = {
         respectPrefersColorScheme: false
       },
       prism: {
-        theme: prismThemes.dracula,
-        darkTheme: prismThemes.dracula,
+        theme: prismThemes.oneDark,
+        darkTheme: prismThemes.oneDark,
+        additionalLanguages: ['lua'],
       },
     }),
 };

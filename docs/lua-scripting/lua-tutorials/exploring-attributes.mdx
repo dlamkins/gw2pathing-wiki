@@ -1,0 +1,52 @@
+---
+id: exploring-attributes
+title: Exploring Script Attributes
+hide_table_of_contents: true
+---
+
+Let's start by exploring how we can use [script attributes](/docs/lua-scripting/lua-lib/api_intro#script-attributes) to execute our scripts. I'd recommend reading through the linked section in the Pathing API for an overview and then coming back.
+
+We'll start by creating a simple script that prints a message to the console when the player triggers one of our markers, similar to the example on the overview page.
+
+For this, we'll be using the [`script-trigger`](/docs/lua-scripting/lua-script-attr/script-trigger) attribute. Feel free to open that in a new window for reference.
+
+That particular attribute has two default parameters, `marker` and `isAutoTrigger`. For now, we'll just focus on using the `isAutoTrigger` parameter. 
+
+Let's start by creating a new function to use with `script-trigger`. 
+
+:::tip
+It's recommended to prefix your global functions with a unique identifier to avoid conflicts with other scripts that might use similar naming schemes.
+:::
+
+Let's create a new script in your `/Scripts` folder named `TriggerFunction.lua` and add a require for it in your `pack.lua`, like so:
+```lua title="pack.lua"
+Example = {}
+
+-- Add a require for our new script
+Pack:Require("/Data/ExamplePack/Scripts/TriggerFunction.lua")
+```
+
+Now, let's add a simple function to `TriggerFunction.lua` that prints a message to the console when it's called.
+
+```lua title="/Data/ExamplePack/Scripts/TriggerFunction.lua"
+-- Notice that we're using the `marker` and `isAutoTrigger` parameters here, followed by our own parameter `customInput`.
+function EP_TriggerFunction(marker, isAutoTrigger, customInput)
+    -- Here we use the `isAutoTrigger` parameter to determine if the trigger was automatic or manual.
+    if isAutoTrigger then
+        print("Auto trigger activated! Custom input: " .. customInput)
+    else
+        print("Manual trigger activated! Custom input: " .. customInput)
+    end
+end
+```
+
+The last piece of the puzzle is to add the `script-trigger` attribute to one (or several) of our markers.
+
+```xml title="ExamplePack.xml"
+<POI ... script-trigger="EP_TriggerFunction(1)">
+<POI ... script-trigger="EP_TriggerFunction(2)" triggerRange="20" autoTrigger="1">
+```
+
+Now, we can go in-game and test our new function. When you go up and manually trigger the first marker, you should see the message "Manual trigger activated! Custom input: 1" in the console. When you get close to the second marker, you should see the message "Auto trigger activated! Custom input: 2" in the console.
+
+That's all it takes to use a script attribute! There are 5 script-attributes that you can use in a similar fashion to this, you can find more information about them in the [Pathing API Docs](/docs/lua-scripting/lua-lib/api_intro#script-attributes).

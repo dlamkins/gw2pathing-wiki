@@ -1,0 +1,130 @@
+---
+id: category
+title: Category
+hide_table_of_contents: false
+---
+
+import CodeHeader from '../../../src/pages/components/CodeHeader';
+import OptionalTag from '../../../src/pages/components/OptionalTag';
+
+A marker pack category.
+
+### Fields
+| Field | Type | Description |
+| :---- | :--: | ----------- |
+| `DefaultToggle` | `boolean` | If the category is enabled by default. |
+| `DisplayName` | `string` | The display name of the category displayed within the UI. |
+| `IsHidden` | `boolean` | If the category is hidden in the UI. |
+| `IsSeparator` | `boolean` | If the category is used as a separator within the UI. |
+| `LoadedFromPack` | `boolean` | If the category was loaded from a pack. |
+| `Name` | `string` | The name of the category (the `name` attribute). |
+| `Namespace` | `string` | The namespace of the category (the `type` attribute used by other pathables). |
+| `Parent` | [`Category`](category) | The parent category of this category or nil if there is no parent category. |
+| `Root` | `boolean` | If the category is the root category. |
+
+### Functions
+| Function | Description |
+| :----- | ----------- |
+| [`GetOrAddCategoryFromNamespace`](#categorygetoraddcategoryfromnamespace) | Returns the requested category by namespace if one exists or creates one and returns it. |
+| [`IsVisible`](#categoryisvisible) | Indicates if the category is currently enabled by the user. |
+| [`Show`](#categoryshow) | Enables the category. |
+| [`Hide`](#categoryhide) | Disables the category. |
+| [`GetMarkers`](#categorygetmarkers)  | Returns all markers directly within the category. |
+
+
+<br/>
+---
+
+### <CodeHeader class="Category" function="GetOrAddCategoryFromNamespace" params="namespace">Category\:GetOrAddCategoryFromNamespace</CodeHeader>
+Returns the requested category by namespace if one exists or creates one and returns it.
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| `namespace` | `string` | The namespace of the category to return. |
+
+#### Returns | [`Category`](category)
+The existing or created category.
+
+#### Usage
+```lua title="script.lua"
+local myCategory = Category:GetOrAddCategoryFromNamespace("my.category.namespace")
+
+Debug:Print("The category is a separator: " .. tostring(myCategory.IsSeparator))
+```
+<br/>
+---
+
+
+### <CodeHeader class="Category" function="IsVisible" params="">Category\:IsVisible</CodeHeader>
+Indicates if the category is currently enabled by the user.
+
+#### Returns | `boolean`
+True if the user has enabled this category. Otherwise false.
+
+#### Usage
+```lua title="script.lua"
+local myCategory = Category:GetOrAddCategoryFromNamespace("my.category.namespace")
+
+if myCategory:IsVisible() then
+    Debug:Print("The category is visible.")
+else
+    Debug:Print("The category is not visible.")
+end
+```
+<br/>
+---
+
+
+### <CodeHeader class="Category" function="Show" params="">Category\:Show</CodeHeader>
+Enables the category.
+
+#### Usage
+```lua title="script.lua"
+local myCategory = Category:GetOrAddCategoryFromNamespace("my.category.namespace")
+
+if not myCategory:IsVisible() then
+    myCategory:Show()
+end
+```
+<br/>
+---
+
+
+### <CodeHeader class="Category" function="Hide" params="">Category\:Hide</CodeHeader>
+Disables the category.
+
+#### Usage
+```lua title="script.lua"
+local myCategory = Category:GetOrAddCategoryFromNamespace("my.category.namespace")
+
+if myCategory:IsVisible() then
+    myCategory:Hide()
+end
+```
+<br/>
+---
+
+
+### <CodeHeader class="Category" function="GetMarkers" params="getAll">Category\:GetMarkers</CodeHeader>
+Returns all markers directly within the category.
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| `getAll` | `boolean` | <OptionalTag/> If true, all child markers are returned. If false or not provided, only the markers directly within the category are returned. |
+
+#### Returns | [`Marker[]`](marker)
+A table of markers.
+
+#### Usage
+```lua title="script.lua"
+local myCategory = Category:GetOrAddCategoryFromNamespace("my.category.namespace")
+local markers = myCategory:GetMarkers()
+
+for _, marker in ipairs(markers) do
+    Debug:Print("Marker name: " .. marker.Name)
+end
+```
+<br/>
+---

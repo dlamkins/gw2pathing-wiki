@@ -1,0 +1,185 @@
+---
+id: world
+title: World
+hide_table_of_contents: false
+---
+
+import CodeHeader from '../../../src/pages/components/CodeHeader';
+import OptionalTag from '../../../src/pages/components/OptionalTag';
+
+The world class provides access to many utility functions used to access categories and pathables (markers/trails) within the world.
+
+### Functions
+| Function | Description |
+| :----- | ----------- |
+| [`CategoryByType`](#worldcategorybytype) | Finds and returns a category based on the provided type. |
+| [`PathableByGuid`](#worldpathablebyguid) | Returns a pathable based on the provided guid. |
+| [`PathablesByGuid`](#worldpathablesbyguid) | Returns a table of pathables based on the provided guid. |
+| [`MarkerByGuid`](#worldmarkerbyguid) | Returns a marker based on the provided guid. |
+| [`GetClosestMarker`](#worldgetclosestmarker) | Returns the closest marker. |
+| [`GetClosestMarker`](#worldgetclosestmarkercategory) | Returns the closest marker directly within the specified category. |
+| [`GetClosestMarkers`](#worldgetclosestmarkers) | Returns the specified number of the closest markers to the player. |
+| [`GetClosestMarkers`](#worldgetclosestmarkerscategory-quantity) | Returns the specified number of the closest markers to the player within the specified category. |
+| [`TrailByGuid`](#worldtrailbyguid) | Returns a trail based on the provided guid. |
+
+<br/>
+---
+
+### <CodeHeader class="World" function="CategoryByType" params="type">World\:CategoryByType</CodeHeader>
+Finds and returns a category based on the provided type.
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| `type` | `string` | The type of category to find. |
+
+#### Returns | [`category`](category)
+The category found, or nil if not found.
+
+#### Usage
+```lua
+local category = World:CategoryByType("example.category.type")
+```
+<br/>
+---
+
+### <CodeHeader class="World" function="PathableByGuid" params="guid">World\:PathableByGuid</CodeHeader>
+Returns a pathable based on the provided guid.
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| `guid` | `string` | The guid of the pathable to find. |
+
+#### Returns | [`IPathable`](ipathable)
+The pathable found, or nil if not found.
+
+#### Usage
+```lua
+local pathable = World:PathableByGuid("/RHfDJuymE+/9AfOSjYTsw==")
+```
+<br/>
+---
+
+### <CodeHeader class="World" function="PathablesByGuid" params="guid">World\:PathablesByGuid</CodeHeader>
+Returns a table of pathables based on the provided guid.
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| `guid` | `string` | The guid of the pathable to find. |
+
+#### Returns | [`IPathable[]`](ipathable)
+A table of pathables found, or nil.
+
+#### Usage
+```lua
+local pathables = World:PathablesByGuid("/RHfDJuymE+/9AfOSjYTsw==")
+```
+<br/>
+---
+
+### <CodeHeader class="World" function="MarkerByGuid" params="guid">World\:MarkerByGuid</CodeHeader>
+Returns a marker based on the provided guid.
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| `guid` | `string` | The guid of the marker to find. |
+
+#### Returns | [`Marker`](marker)
+The first marker found, or nil.
+
+#### Usage
+```lua
+local marker = World:MarkerByGuid("/RHfDJuymE+/9AfOSjYTsw==")
+```
+<br/>
+---
+
+### <CodeHeader class="World" function="GetClosestMarker" params="">World\:GetClosestMarker</CodeHeader>
+Returns the closest marker.
+
+#### Returns | [`Marker`](marker)
+The closest marker.
+
+#### Usage
+```lua
+local closestMarker = World:GetClosestMarker()
+```
+<br/>
+---
+
+### <CodeHeader class="World" function="GetClosestMarker" params="category">World\:GetClosestMarker(category)</CodeHeader>
+Returns the closest marker directly within the specified category.
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| `category` | [`Category`](category) | The category to search within. |
+
+#### Returns | [`Marker`](marker)
+The closest marker within the specified category.
+
+#### Usage
+```lua
+local closestMarker = World:GetClosestMarker(World:CategoryByType("example.category.type"))
+```
+<br/>
+---
+
+### <CodeHeader class="World" function="GetClosestMarkers" params="quantity">World\:GetClosestMarkers(quantity)</CodeHeader>
+Returns the specified number of the closest markers to the player.
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| `quantity` | `number` | The number of markers to return. |
+
+#### Returns | [`Marker[]`](marker)
+The closest markers.
+
+#### Usage
+```lua
+local closestMarkers = World:GetClosestMarkers(5)
+```
+<br/>
+---
+
+### <CodeHeader class="World" function="GetClosestMarkers" params="category, quantity">World\:GetClosestMarkers(category, quantity)</CodeHeader>
+Returns the specified number of the closest markers to the player within the specified category.
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| `category` | [`Category`](category) | The category of markers to search for. |
+| `quantity` | `number` | The number of markers to return. |
+
+#### Returns | [`Marker[]`](marker)
+The closest markers within the specified category.
+
+#### Usage
+```lua
+local closestMarkers = World:GetClosestMarkers(World:CategoryByType("example.category.type"), 5)
+```
+
+<br/>
+---
+
+### <CodeHeader class="World" function="TrailByGuid" params="guid">World\:TrailByGuid</CodeHeader>
+Returns a trail based on the provided guid.
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| `guid` | `string` | The guid of the trail to find. |
+
+#### Returns | [`Trail`](trail)
+The trail found, or nil if not found.
+
+#### Usage
+```lua
+local trail = World:TrailByGuid("/RHfDJuymE+/9AfOSjYTsw==")
+```
+<br/>
+---

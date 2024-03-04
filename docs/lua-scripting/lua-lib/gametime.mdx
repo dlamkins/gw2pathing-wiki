@@ -1,0 +1,33 @@
+---
+id: gametime
+title: GameTime
+hide_table_of_contents: false
+---
+import CodeHeader from '../../../src/pages/components/CodeHeader';
+
+A table containing two timespans.
+### Fields
+| Field | Type | Description |
+| :---- | :--: | ----------- |
+| `ElapsedGameTime` | [`TimeSpan`](#timespan) | Time since the last tick call. |
+| `TotalGameTime` | [`TimeSpan`](#timespan) | Time since Blish HUD started. |
+<br/>
+---
+
+### <CodeHeader class="TimeSpan">TimeSpan</CodeHeader>
+A timespan.
+
+#### Fields
+| Field | Type | Description |
+| :---- | :--: | ----------- |
+| `Days` | `integer` | Gets the days component of the time interval. |
+| `Hours` | `integer` | Gets the hours component of the time interval. |
+| `Milliseconds` | `integer` | Gets the milliseconds component of the time interval. |
+| `Minutes` | `integer` | Gets the minutes component of the time interval. |
+| `Seconds` | `integer` | Gets the seconds component of the time interval. |
+| `Ticks` | `integer` | Gets the number of ticks. |
+| `TotalDays` | `number` | Gets the value of the time interval expressed in whole and fractional days. |
+| `TotalHours` | `number` | Gets the value of the time interval expressed in whole and fractional hours. |
+| `TotalMilliseconds` | `number` | Gets the value of the time interval expressed in whole and fractional milliseconds. |
+| `TotalMinutes` | `number` | Gets the value of the time interval expressed in whole and fractional minutes. |
+| `TotalSeconds` | `number` | Gets the value of the time interval expressed in whole and fractional seconds. |

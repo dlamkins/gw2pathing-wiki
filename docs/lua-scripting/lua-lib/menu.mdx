@@ -1,0 +1,77 @@
+---
+id: menu
+title: Menu
+hide_table_of_contents: false
+---
+
+import CodeHeader from '../../../src/pages/components/CodeHeader';
+import OptionalTag from '../../../src/pages/components/OptionalTag';
+
+Menu provides the ability to create and remove menus for script functions in the Pathing UI.
+
+:::tip
+You can find a tutorial for [creating menus](creating-a-script-menu) in the tutorial section!
+:::
+
+### Fields
+| Field | Type | Description |
+| :---- | :--: | ----------- |
+| `Name` | `string` | The name and display text of the menu. |
+| `OnClick` | `function(Menu)` | The function called when the menu is clicked or toggled. Can be nil. |
+| `CanCheck` | `boolean` | Indicates if the menu has a checkbox. Can be nil. |
+| `Checked` | `boolean` | Indicates if the menu checkbox is checked. Can be nil. |
+| `Tooltip` | `string` | The tooltip used by the menu. Can be nil. |
+
+### Functions
+| Function | Description |
+| :----- | ----------- |
+| [`Add`](#menuadd) | Adds a new menu. |
+| [`Remove`](#menuremove) | Removes the specified menu item. |
+<br/>
+---
+
+
+### <CodeHeader class="Menu" function="Add" params="name, onClick, canCheck, checked, tooltip">Menu\:Add</CodeHeader>
+Adds a new menu to the menu you call this function on.
+
+#### Parameters
+| Parameter | Type | Description |
+| :--- | :---: | --- |
+| `name`     | `string` | The name and display text of the menu. |
+| `onClick`  | `function(Menu)` | The function called when the menu is clicked or toggled. May be nil. |
+| `canCheck` | `boolean` | <OptionalTag/> If provided, indicates if the menu has a checkbox. |
+| `checked`  | `boolean` | <OptionalTag/> If provided, indicates if the menu checkbox is checked. |
+| `tooltip`  | `string` | <OptionalTag/> If provided, sets the tooltip used by the menu. |
+#### Returns | [`Menu`](menu)
+The new menu
+#### Usage
+```lua title="menu.lua"
+local function doSomething(Menu)
+    print("Menu clicked, current state: " .. tostring(Menu.Checked))
+end
+
+local rootMenu = Menu:Add("Example Menu", nil, nil, nil, "This is an example menu")
+local subMenuItem = rootMenu:Add("Click me!", doSomething, true, false, "This menu logs its state when clicked")
+```
+<br/>
+---
+
+
+### <CodeHeader class="Menu" function="Remove" params="menuItem">Menu\:Remove</CodeHeader>
+Removes the specified menu item.
+
+#### Parameters
+| Parameter | Type | Description |
+| :--- | :---: | --- |
+| `menuItem` | `Menu` | The menu item to remove. |
+
+#### Usage
+```lua title="menu.lua"
+local rootMenu = Menu:Add("Example Menu", nil, nil, nil, "This is an example menu")
+
+local function removeThisMenu(Menu)
+    rootMenu:Remove(Menu)
+end
+
+local subMenuItem = rootMenu:Add("Click me!", removeThisMenu, nil, nil, "This menu removes itself when clicked")
+```

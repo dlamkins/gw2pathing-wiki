@@ -1,0 +1,35 @@
+---
+id: user
+title: User
+hide_table_of_contents: true
+---
+
+import CodeHeader from '../../../src/pages/components/CodeHeader';
+
+Provides user-based functions.
+
+#### Functions
+| Function | Description |
+| :----- | ----------- |
+| [`SetClipboard`](#setclipboard) | Sets the user's clipboard to the provided value. |
+<br/>
+---
+
+### <CodeHeader class="User" function="SetClipboard" params="value">User\:SetClipboard</CodeHeader>
+Sets the user's clipboard to the provided value. The exact behavior of this feature can be modified by the user.
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| value | string | The string to copy to the user's clipboard |
+
+#### Returns | `boolean`
+Indicates if setting the clipboard was immediately successful.
+
+#### Usage
+```lua title="script.lua"
+User:SetClipboard("Hello, clipboard!")
+```
+
+<br/>
+---

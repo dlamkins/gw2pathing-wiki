@@ -1,0 +1,150 @@
+---
+id: creating-a-marker
+title: Creating a Marker
+hide_table_of_contents: false
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+### Phase 1. Upgrading the TriggerFunction
+
+Continuing on with our `TriggerFunction` example, now we'll create a new marker above our triggered marker instead of moving the original marker.
+
+To create a marker, we need to make use of the [`Pack:CreateMarker`](/docs/lua-scripting/lua-lib/pack#packcreatemarker) function. Feel free to check it out.
+
+While you can technically create a marker without passing it any attributes, it's generally a good idea to at least provide some basic attributes. 
+
+Let's change our `TriggerFunction` to create a new marker above the position of the original marker.
+
+:::tip
+It's a good idea to always set the category, so that the new marker can be hidden or shown by toggling your pack's categories.
+:::
+
+```lua title="/Data/ExamplePack/Scripts/TriggerFunction.lua"
+-- We can use the World global to get a reference to the category we want to use for our new marker
+-- highlight-next-line
+local category = World:CategoryByType("ep.marker.category")
+
+function EP_TriggerFunction(marker, isAutoTrigger, customInput)
+    -- For the most part, the attribute names are the same as you'd find in the xml
+    -- highlight-start
+    local new_marker_attr = {   
+        MapVisibility = false,
+        InGameVisibility = true,
+        Category = category, -- 
+        xpos = marker.Position.X,
+        ypos = 0,
+        zpos = marker.Position.Z,
+        iconFile = "Data/ExamplePack/Markers/MarkerIcon.png",
+    }
+    -- highlight-end
+
+    if isAutoTrigger then
+        -- We can adjust the ypos after creating the initial table by just setting it again using the `.` accessor
+        -- highlight-next-line
+        new_marker_attr.ypos = marker.Position.Y + 20
+    else
+        -- highlight-next-line
+        new_marker_attr.ypos = marker.Position.Y + 50
+    end
+
+    -- Create the marker
+    -- highlight-next-line
+    local new_marker = Pack:CreateMarker(new_marker_attr)
+end
+```
+Nice! We're making some real progress now. Now when you trigger the marker, a new marker should be created above the original marker. 
+<br/>
+---
+
+### Phase 2. Another Upgrade
+Let's take this one step further and make it so that interacting with the original marker a second time will remove the new marker.
+
+
+<Tabs>
+    <TabItem value="triggerfunc" label="TriggerFunction.lua">
+        ```lua title="/Data/ExamplePack/Scripts/TriggerFunction.lua"
+        -- Let's create a table to keep track of our new markers. We'll move the category there too
+        -- highlight-start
+        ExamplePack.TriggerFunction = {
+            activeMarkers = {},
+            category = World:CategoryByType("ep.marker.category")
+        }
+        -- highlight-end
+
+        -- Let's watch that table so we can keep an eye on it in the console too!
+        -- highlight-next-line
+        Debug:Watch("TriggerFunction", ExamplePack.TriggerFunction)
+
+        -- We'll move the logic for spawning and removing markers to new functions
+        -- highlight-next-line
+        local function spawnNewMarker(marker, isAutoTrigger)
+            local new_marker_attr = {   
+                MapVisibility = false,
+                InGameVisibility = true,
+                -- highlight-next-line
+                Category = ExamplePack.TriggerFunction.category,
+                xpos = marker.Position.X,
+                ypos = 0,
+                zpos = marker.Position.Z,
+                iconFile = "Data/ExamplePack/Markers/MarkerIcon.png",
+            }
+
+            if isAutoTrigger then
+                new_marker_attr.ypos = marker.Position.Y + 20
+            else
+                new_marker_attr.ypos = marker.Position.Y + 50
+            end
+
+            local new_marker = Pack:CreateMarker(new_marker_attr)
+            -- Let's use the trigger marker's GUID to keep track of it's spawned marker
+            -- highlight-next-line
+            ExamplePack.TriggerFunction.activeMarkers[marker.GUID] = new_marker
+        end
+
+        -- Given a GUID, we can remove the marker from the world and then remove it's reference from our table
+        -- highlight-start
+        local function removeNewMarker(guid)
+            local spawnedMarker = ExamplePack.TriggerFunction.activeMarkers[marker.GUID]
+            if spawnedMarker then
+                spawnedMarker:Remove()
+                ExamplePack.TriggerFunction.activeMarkers[marker.GUID] = nil
+            end
+        end
+        -- highlight-end
+
+        -- We aren't using customInput anymore, so let's take that out
+        -- highlight-next-line
+        function EP_TriggerFunction(marker, isAutoTrigger)
+            -- Now we can just perform the check here and offload the logic to the new functions
+            -- highlight-start
+            if ExamplePack.TriggerFunction.activeMarkers[marker.GUID] ~= nil then
+                removeNewMarker(marker.GUID)
+            else
+                spawnNewMarker(marker, isAutoTrigger)
+            end
+            -- highlight-end
+        end
+        ```
+    </TabItem>
+    <TabItem value="pack" label="pack.lua">
+        ```lua title="pack.lua"
+        -- Make sure you have a global table to attach your TriggerFunction table to!
+        -- highlight-start
+        ExamplePack = {}
+        -- highlight-end
+
+        Pack:Require("Data/ExamplePack/Scripts/TriggerFunction.lua")
+        ```
+    </TabItem>
+    <TabItem value="xml" label="ExamplePack.xml">
+        ```xml title="ExamplePack.xml"
+        <!-- We aren't asking for an extra parameter anymore, so make sure to update your script attributes!-->
+        <!-- highlight-next-line -->
+        <POI ... script-trigger="EP_TriggerFunction()">
+        ```
+    </TabItem>
+</Tabs>
+
+If you've followed along correctly, you should now be able to spawn and remove the new marker by interacting with the trigger marker!

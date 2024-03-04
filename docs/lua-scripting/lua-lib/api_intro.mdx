@@ -1,0 +1,103 @@
+---
+id: api_intro
+title: Overview
+hide_table_of_contents: false
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import GlobalClassesTable from '../../../src/pages/components/GlobalClassesTable';
+import TypesTable from '../../../src/pages/components/TypesTable';
+
+The purpose of this page is to provide an overview of all the classes, functions, and types available in the Pathing API. It won't go into detail on how to use them, 
+but can be used as a quick reference for when you need to look up a class, function, or type and aren't sure where it might be. 
+
+---
+
+## Script Attributes
+Script Attributes are attribute tags used on markers in your `pack.xml` in order to execute Lua functions. They provide interoperability between your scripts and your markers and trails.
+That's a fancy way of saying you can use them to interact with your markers and trails in your Lua scripts.
+
+Here's an example of a marker with a Script Attribute:
+
+<Tabs>
+    <TabItem value="xml" label="pack.xml">
+    ```xml title="pack.xml"
+    <POI ... script-once="SaySomething(Woah!)" guid="aWk9ZRjiAUanhexdaUdYWA=="/>
+    ```
+    </TabItem>
+
+    <TabItem value="pack-lua" label="pack.lua">
+    ```lua title="pack.lua"
+    -- The script must be required in order to be used
+    Pack:Require("/Data/ExamplePack/Scripts/script.lua")
+    ```
+    </TabItem>
+
+    <TabItem value="script-lua" label="script.lua">
+    ```lua title="/Data/ExamplePack/Scripts/script.lua"
+    -- Notice we use the default `marker` parameter, then our own custom `message` parameter
+    function SaySomething(marker, message)
+        Debug:Print("Message from marker " .. marker.Guid .. ": " .. message)
+    end
+    ```
+    </TabItem>
+
+    <TabItem value="output" lable="Output">
+    ```md title="Output"
+        Message from marker aWk9ZRjiAUanhexdaUdYWA: Woah!
+    ```
+    </TabItem>
+</Tabs>
+
+In this example, the `script-once` attribute is used to call the `SaySomething` function in the Lua script. The `marker` parameter is automatically passed to the function, and the `message` parameter is passed from the `script-once` attribute.
+
+Every script attribute will execute at different times and have different parameters, making them all useful in different ways depending on what you are trying to accomplish. Below is a list of all script attributes with a brief description.
+You can click on the attribute name to see more information about it.
+
+| Script Attribute | Default Parameters | Description |
+| :--------------- | :----------------: | ----------- |
+| [script-filter](../lua-script-attr/script-filter) | marker([`Marker`](marker)) | Executes every frame if it is determined that the attached marker should be visible. |
+| [script-focus](../lua-script-attr/script-focus) | marker([`Marker`](marker)), isFocused(`boolean`) | Executes when a marker is focused (the player is within the marker's `triggerRange`). |
+| [script-once](../lua-script-attr/script-once) | marker([`Marker`](marker)) | Executes once when the marker is loaded. |
+| [script-tick](../lua-script-attr/script-tick) | marker([`Marker`](marker)), gameTime([`GameTime`](gametime)) | Executes once every in-game tick (typically every frame, but potentially less depending on configuration) |
+| [script-trigger](../lua-script-attr/script-trigger) | marker([`Marker`](marker)), isAutoTriggered(`boolean`) | Executes when a marker is triggered (the player is within `triggerRange` and `autoTrigger` is on or the player has pressed their interact key). |
+<br/>
+---
+
+## Globals
+The Pathing API provides a number of global classes and functions that you can use in your Lua scripts. These classes and functions are used to interact with the game world, markers, trails, and more.
+
+Global classes are always available and can be used without any special setup. Their functions can be called directly from your Lua scripts by using the class name followed by a colon and the function name, like this: 
+```lua
+Debug:Print("Hello, world!")
+```
+Below is a list of all global classes and their functions. Clicking on the arrow next to the class name will expand their function list, and clicking on the class itself will take you to its page in the docs.
+
+<GlobalClassesTable/>
+<br/>
+---
+
+## Types
+The Pathing API also provides a number of types that you'll need to explore to get information about various things. These types are used to represent various objects in the game world, such as markers, trails, and more. They all have their own fields and helper functions.
+
+For example, if I wanted to get the closest marker's position, I could use the `World:GetClosestMarker` global function and then reference the returned [`Marker`](/docs/lua-scripting/lua-lib/marker)'s `Position` field, like this:
+<Tabs>
+    <TabItem value="lua" label="Lua" default>
+        ```lua title="script.lua"
+        local closestMarker = World:GetClosestMarker()
+        local closestMarkerPosition = closestMarker.Position
+
+        Debug:Print("The closest marker's position is X: " .. closestMarkerPosition.X .. ", Y: " .. closestMarkerPosition.Y .. ", Z: " .. closestMarkerPosition.Z)
+        ```
+    </TabItem>
+    <TabItem value="output" label="Output">
+        ```md title="Output"
+        The closest marker's position is X: 0, Y: 0, Z: 0
+        ```
+    </TabItem>
+</Tabs>
+
+Below is a list of all types and any helper functions they may have. Clicking on the arrow next to the type name will expand their function list, and clicking on the type itself will take you to its page in the docs.
+
+<TypesTable/>

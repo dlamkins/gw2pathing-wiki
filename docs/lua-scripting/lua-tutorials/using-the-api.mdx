@@ -1,0 +1,36 @@
+---
+id: using-the-api
+title: Using Globals and Types
+hide_table_of_contents: true
+---
+
+[Globals](/docs/lua-scripting/lua-lib/api_intro#globals) and [Types](/docs/lua-scripting/lua-lib/api_intro#globals) are the other two main components of the API. You've actually already used a global with `Debug:Print()` but I recommend you take some time now to go read through their sections of the overview to get an idea of what they are and how they're used.
+
+---
+
+Now that you're a bit more familiar with the API, let's pick up where we left off with the last example and add some more functionality to our script.
+
+Referencing the [Marker](/docs/lua-scripting/lua-lib/marker) type, we can use the marker that's passed to us by `script-trigger` to get some more info about the marker or change its properties. For now, lets try printing the position of the marker and then moving it up.
+
+:::info
+The dot accessor `.` is used to access the fields, while a colon `:` is used to call functions on it. For example, `marker.Position` will give us the position of the marker and `marker:SetPos(x,y,z)` will let use change the position of a marker.
+:::
+
+```lua title="/Data/ExamplePack/Scripts/TriggerFunction.lua"
+function EP_TriggerFunction(marker, isAutoTrigger, customInput)
+    if isAutoTrigger then
+        -- highlight-start
+        Debug:Print("Auto trigger activated! Marker position - X: " ..  marker.Position.X .. " Y: " .. marker.Position.Y .. " Z: " .. marker.Position.Z)
+        marker:SetPos(marker.Position.X, marker.Position.Y + 20, marker.Position.Z)
+        -- highlight-end
+    else
+        -- We'll move the marker up more if it's a manual trigger to show a difference
+        -- highlight-start
+        Debug:Print("Manual trigger activated! Marker position - X: " ..  marker.Position.X .. " Y: " .. marker.Position.Y .. " Z: " .. marker.Position.Z)
+        marker:SetPos(marker.Position.X, marker.Position.Y + 50, marker.Position.Z)
+        -- highlight-end
+    end
+end
+```
+
+Now when you trigger the marker, it should jump up by 20 units if it's an auto trigger and 50 units if it's a manual trigger. Try it out!
