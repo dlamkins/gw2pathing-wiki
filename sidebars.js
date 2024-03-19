@@ -89,14 +89,7 @@ const sidebars = {
             }
     
           ]
-        },
-        {
-          type: 'category',
-          label: 'Tutorials',
-          items: [
-            "marker-dev/tutorials/getting-started",
-          ],
-        },
+        }
       ],
     },
     {
@@ -162,6 +155,28 @@ const sidebars = {
                 'lua-scripting/lua-lib/vector3',
               ],
             }
+          ],
+        }
+      ]
+    },
+    {
+      type: 'category',
+      label: 'Guides',
+      items: [
+        "guides/marker-pack-academy",
+        {
+          type: 'category',
+          label: 'So You Wanna Make a Marker Pack by Metallis',
+          items: [
+            'guides/sywmamp/introduction',
+            'guides/sywmamp/setting-up-for-success',
+            'guides/sywmamp/the-dashboard',
+            'guides/sywmamp/anatomy-of-a-marker',
+            'guides/sywmamp/markers-alone-a-pack-does-not-make',
+            'guides/sywmamp/minimum-viable-product',
+            'guides/sywmamp/the-extra-mile',
+            'guides/sywmamp/the-gravy-train',
+            'guides/sywmamp/faq',
           ],
         }
       ]
