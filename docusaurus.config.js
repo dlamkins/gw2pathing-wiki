@@ -53,7 +53,7 @@ const config = {
         },
         items: [
           {
-            to: '/docs/usage/markers', 
+            to: '/docs/usage/setup', 
             //acvtiveBasePath: 'docs/usage',
             label: 'User Guide', 
             position: 'left'
