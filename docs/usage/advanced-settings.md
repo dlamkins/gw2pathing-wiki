@@ -16,8 +16,8 @@ A set of directory paths to also check for marker packs to load.  For example, w
 
 ```yaml
 marker-load-paths:
-  - c:\taco\pois
-  - c:\anotherlocation\markers
+  - c:/taco/pois
+  - c:/anotherlocation/markers
 ```
 
 ### optimize-marker-packs
