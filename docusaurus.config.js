@@ -9,9 +9,9 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'GW2 Pathing',
-  tagline: 'Markers, trails, and more for Guild Wars 2',
+  tagline: 'Helping gently guide you through Tyria.',
   favicon: 'img/favicon.ico',
-  url: 'https://gw2pathing.com', // TODO: Not sure if this will be the final URL
+  url: 'https://gw2pathing.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -71,7 +71,7 @@ const config = {
             label: 'Lua Scripting',
           },
           {
-            href: 'https://github.com/dlamkins/gw2pathing-wiki',
+            href: 'https://github.com/blish-hud/Pathing',
             label: 'GitHub',
             position: 'right',
           },
@@ -92,10 +92,10 @@ const config = {
       announcementBar: {
         id: 'discord', // Any value that will identify this message.
         content:
-          'Check out our <a target="_blank" href="https://discord.gg/FYKN3qh">Discord channel</a> for the latest news, prerelease builds, and troubleshooting assistance.',
+          'Check out the <a target="_blank" href="https://discord.gg/FYKN3qh">Blish HUD Discord channel</a> for the latest news and troubleshooting assistance.',
         backgroundColor: '#8172DA', // Defaults to `#fff`.
         textColor: 'white', // Defaults to `#000`.
-        isCloseable: true, // Defaults to `true`.
+        isCloseable: false, // Defaults to `true`.
       },
       colorMode: {
         defaultMode: "dark",
