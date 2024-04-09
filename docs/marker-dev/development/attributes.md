@@ -28,7 +28,6 @@ If you need assistance or would like to provide suggestions for future attribute
 | [Bounce](/docs/marker-dev/attributes/bounce) | *Allows a marker to "bounce" or rise up out of the way when triggered.* |
 | [CanFade](/docs/marker-dev/attributes/canfade) | *Allows a marker or trail to ignore fade features such as those which hide trails around the player or between the user and their camera.* |
 | [Cull](/docs/marker-dev/attributes/cull) | *By default markers and trails are rendered without culling meaning that both sides are rendered at all times. Alternative culling settings allow you to enable culling for one side or the other. For example, a trail can be made to be visible when viewed from below.* |
-| [DefaultToggle](/docs/marker-dev/attributes/defaulttoggle) | *Indicates if the category should be enabled by default.* |
 | [Festival](/docs/marker-dev/attributes/festival) | *Hides the marker or trail if one of the specified festivals is not active.* |
 | [InvertBehavior](/docs/marker-dev/attributes/invertbehavior) | *If enabled, the [behavior](/docs/marker-dev/attributes/behavior) filter is inverted.  By taking advantage of duplicate [GUIDs](/docs/marker-dev/attributes/guid) on a second marker you can have markers which are displayed only while the triggered marker is hidden.* |
 | [IsHidden](/docs/marker-dev/attributes/ishidden) | *Prevents the category from being displayed in the category menu.* |
