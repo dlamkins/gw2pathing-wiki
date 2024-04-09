@@ -14,7 +14,7 @@ hide_table_of_contents: true
 A unique identifier used to track the state of certain behaviors between launch sessions.
 | Attribute | Data Type | Default Value | Example | Description |
 |-|-|-|-|-|
-| guid | string |  | NdG3CddnEEO+xNrGN7lGIA== | The base64 encoded GUID used to uniquely identify the marker. | 
+| GUID | string |  | NdG3CddnEEO+xNrGN7lGIA== | The base64 encoded GUID used to uniquely identify the marker. | 
 
 ## How it works
 

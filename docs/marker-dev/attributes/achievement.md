@@ -20,8 +20,8 @@ If the user does not provide an API key or the user has not consented to the `ac
 Hides markers and trails based on their associated completion status reported by the web API.
 | Attribute | Data Type | Default Value | Example | Description |
 |-|-|-|-|-|
-| achievementid | integer |  | 4949 | The achievement this marker or trail will hide for when completed. | 
-| achievementbit | integer |  | 3 | The id of the sub item within an achievement this marker or trail will hide for when completed. | 
+| achievementId | integer |  | 4949 | The achievement this marker or trail will hide for when completed. | 
+| achievementBit | integer |  | 3 | The id of the sub item within an achievement this marker or trail will hide for when completed. | 
 
 ## Supported values
 ### achievementid

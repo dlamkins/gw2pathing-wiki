@@ -14,7 +14,7 @@ hide_table_of_contents: true
 Allows you to apply a width modifier to a trail.
 | Attribute | Data Type | Default Value | Example | Description |
 |-|-|-|-|-|
-| trailscale | float | 1 | 1.5 | The width multiplier to apply to the width of the trail. | 
+| trailScale | float | 1 | 1.5 | The width multiplier to apply to the width of the trail. | 
 
 ## Remarks
 

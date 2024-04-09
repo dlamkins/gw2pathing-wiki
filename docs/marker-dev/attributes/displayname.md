@@ -14,6 +14,6 @@ hide_table_of_contents: true
 The name shown in the category dropdown menus.
 | Attribute | Data Type | Default Value | Example | Description |
 |-|-|-|-|-|
-| displayname | string |  | Tickle Trahearne | The display text to show for the category. | 
+| DisplayName | string |  | Tickle Trahearne | The display text to show for the category. | 
 
 

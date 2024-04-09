@@ -18,6 +18,6 @@ This attribute should be used sparingly - please be considerate of your users. W
 Determines if the marker should scale when the user zooms in and out of their map.
 | Attribute | Data Type | Default Value | Example | Description |
 |-|-|-|-|-|
-| scaleonmapwithzoom | bool | 1 | 0 | If the marker will scale when the map is zoomed. | 
+| scaleOnMapWithZoom | bool | 1 | 0 | If the marker will scale when the map is zoomed. | 
 
 

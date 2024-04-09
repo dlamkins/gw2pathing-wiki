@@ -19,7 +19,7 @@ Allows you to set a value to the users clipboard. Good for providing waypoints, 
 | Attribute | Data Type | Default Value | Example | Description |
 |-|-|-|-|-|
 | copy | string |  | [&BOAHAAA=] | The text assigned to the clipboard. | 
-| copy-message | string |  | Jacka Itzel waypoint copied! | The message shown on screen when the copy is activated. | 
+| copy-message | string |  | Jaka Itzel waypoint copied! | The message shown on screen when the copy is activated. | 
 
 ## Triggering a copy
 

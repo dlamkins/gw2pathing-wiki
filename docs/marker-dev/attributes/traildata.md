@@ -14,6 +14,6 @@ hide_table_of_contents: true
 The path to the .trl file which represents the trail itself.
 | Attribute | Data Type | Default Value | Example | Description |
 |-|-|-|-|-|
-| traildata | file |  | trails/jumping-puzzle.trl | The path to the .trl file. | 
+| TrailData | file |  | trails/jumping-puzzle.trl | The path to the .trl file. | 
 
 

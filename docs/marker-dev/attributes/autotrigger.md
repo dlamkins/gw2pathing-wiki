@@ -14,7 +14,7 @@ hide_table_of_contents: true
 If enabled, attributes and behaviors which would normally require an interaction to activate will instead activate automatically when within `triggerrange`.
 | Attribute | Data Type | Default Value | Example | Description |
 |-|-|-|-|-|
-| autotrigger | bool | 0 | 1 | 1 to indicate that all applicable behaviors / attributes on the marker should auto trigger once the character is in range. | 
+| autoTrigger | bool | 0 | 1 | 1 to indicate that all applicable behaviors / attributes on the marker should auto trigger once the character is in range. | 
 
 
 

@@ -14,6 +14,6 @@ hide_table_of_contents: true
 Indicates the size of the marker.
 | Attribute | Data Type | Default Value | Example | Description |
 |-|-|-|-|-|
-| iconsize | float | 1 | 2 | The size the marker should be. | 
+| iconSize | float | 1 | 2 | The size the marker should be. | 
 
 

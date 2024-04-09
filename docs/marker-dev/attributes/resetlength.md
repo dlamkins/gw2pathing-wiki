@@ -18,7 +18,7 @@ TacO only supports reset lengths as whole integer values whereas Blish HUD's Pat
 When using behavior 4 (reappear after timer) this value defines, in seconds, the duration until the marker is reset after being activated.
 | Attribute | Data Type | Default Value | Example | Description |
 |-|-|-|-|-|
-| resetlength | float |  | 20.75 | The number of seconds until the marker should reappear. | 
+| resetLength | float |  | 20.75 | The number of seconds until the marker should reappear. | 
 
 
 

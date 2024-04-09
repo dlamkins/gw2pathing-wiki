@@ -15,7 +15,7 @@ Toggles a category on or off.  Similar in behavior to the [Show & Hide](/docs/ma
 | Attribute | Data Type | Default Value | Example | Description |
 |-|-|-|-|-|
 | toggle | string |  | mypack.adventures.tickletrahearne | A category to toggle when triggered. If the category is disabled, it will be enabled. If the category is enabled, it will be disabled. | 
-| togglecategory | string |  | mypack.adventures.tickletrahearne | Alias for `toggle` to allow for backward compatibility with TacO. | 
+| toggleCategory | string |  | mypack.adventures.tickletrahearne | Alias for `toggle` to allow for backward compatibility with TacO. | 
 
 ## Supported value
 

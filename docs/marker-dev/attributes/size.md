@@ -20,8 +20,8 @@ While `minsize` can be helpful to draw attention to important markers off in the
 Specifies the minimum or maximum size of a marker on screen measured in pixels. The marker will continue to grow or shrink based on distance but will stop when reaching the specified minimum or maximum.
 | Attribute | Data Type | Default Value | Example | Description |
 |-|-|-|-|-|
-| minsize | float | 5 | 24 | As the player walks further from the marker, this will be the smallest the marker can be displayed measured in pixels. | 
-| maxsize | float | 2048 | 128 | As the player walks closer to the marker, this will be the largest the marker can be displayed measured in pixels. | 
+| minSize | float | 5 | 24 | As the player walks further from the marker, this will be the smallest the marker can be displayed measured in pixels. | 
+| maxSize | float | 2048 | 128 | As the player walks closer to the marker, this will be the largest the marker can be displayed measured in pixels. | 
 
 ## Supported values
 

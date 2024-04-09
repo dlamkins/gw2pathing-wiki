@@ -18,6 +18,6 @@ Please be considerate of your users and avoid specifying sizes larger than what 
 The size, in pixels, that the marker should be shown on the minimap or fullscreen map.  Assuming [ScaleOnMapWithZoom](scaleonmapwithzoom) is enabled (it is by default), the measurement will be scaled as the user zooms further out.
 | Attribute | Data Type | Default Value | Example | Description |
 |-|-|-|-|-|
-| mapdisplaysize | float | 20 | 120 | The size of the marker in pixels when zoomed into the map exactly 1x. | 
+| mapDisplaySize | float | 20 | 120 | The size of the marker in pixels when zoomed into the map exactly 1x. | 
 
 
