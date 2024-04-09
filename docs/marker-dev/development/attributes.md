@@ -43,7 +43,6 @@ If you need assistance or would like to provide suggestions for future attribute
 | [ShowHide](/docs/marker-dev/attributes/showhide) | *Allows showing or hiding a specified category when triggered.  Similar in behavior to the [Toggle](/docs/marker-dev/attributes/toggle) attribute.* |
 | [Specialization](/docs/marker-dev/attributes/specialization) | *Hides the marker or trail if the player is not currently one of the specified specializations.* |
 | [Tip](/docs/marker-dev/attributes/tip) | *Allows you to display a tooltip on markers on the minimap or categories in the category dropdown.* |
-| [Toggle](/docs/marker-dev/attributes/toggle) | *Toggles a category on or off.  Similar in behavior to the [Show & Hide](/docs/marker-dev/attributes/showhide) attributes.* |
 
 ## Attribute Prefixes
 
