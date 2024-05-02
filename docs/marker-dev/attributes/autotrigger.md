@@ -25,4 +25,5 @@ If enabled, attributes and behaviors which would normally require an interaction
 - [Toggle](/docs/marker-dev/attributes/toggle)
 - [ShowHide](/docs/marker-dev/attributes/showhide)
 - [Achievement](/docs/marker-dev/attributes/achievement)
+- [ResetGUID](/docs/marker-dev/attributes/resetguid)
 

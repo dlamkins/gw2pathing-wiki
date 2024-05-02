@@ -60,6 +60,8 @@ const sidebars = {
                 "marker-dev/attributes/position",
                 "marker-dev/attributes/profession",
                 "marker-dev/attributes/race",
+                "marker-dev/attributes/raid",
+                "marker-dev/attributes/resetguid",
                 "marker-dev/attributes/resetlength",
                 "marker-dev/attributes/rotate",
                 "marker-dev/attributes/scaleonmapwithzoom",

@@ -26,4 +26,5 @@ Used to indicate a trigger range. This attribute is used by multiple other attri
 - [ShowHide](/docs/marker-dev/attributes/showhide)
 - [Toggle](/docs/marker-dev/attributes/toggle)
 - [Achievement](/docs/marker-dev/attributes/achievement)
+- [ResetGUID](/docs/marker-dev/attributes/resetguid)
 

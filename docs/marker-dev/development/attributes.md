@@ -37,6 +37,8 @@ If you need assistance or would like to provide suggestions for future attribute
 | [Occlude](/docs/marker-dev/attributes/occlude) | *Allows a marker to occlude the 3D Pathing elements behind it.  If enabled, the marker does not require a texture.* |
 | [Profession](/docs/marker-dev/attributes/profession) | *Hides the marker or trail if the player is not currently one of the specified professions.* |
 | [Race](/docs/marker-dev/attributes/race) | *Hides the marker or trail if the player is not currently one of the specified races.* |
+| [Raid](/docs/marker-dev/attributes/raid) | *Hides markers and trails based on their associated raid completion status reported by the web API.* |
+| [ResetGUID](/docs/marker-dev/attributes/resetguid) | *Resets GUID(s) so that another behavior is no longer filtering them.* |
 | [Rotate](/docs/marker-dev/attributes/rotate) | *Allows you to statically rotate a marker instead of it automatically facing the player. Value is in degrees. Rotation is applied first to the x axis, then to y, and finally to z.* |
 | [Schedule](/docs/marker-dev/attributes/schedule) | *Hides the marker outside of the specified schedule. Good for showing markers only during their associated scheduled meta event, day of the week, etc. All scheduling is based on UTC.* |
 | [Script](/docs/marker-dev/attributes/script) | *Allows you to trigger Lua functions or determine if a marker is visible using a Lua function.* |
