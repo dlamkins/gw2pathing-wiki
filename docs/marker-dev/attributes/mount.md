@@ -26,6 +26,8 @@ Hides the marker or trail if the player is not currently riding one of the speci
 - rollerbeetle
 - warclaw
 - skyscale
+- skiff
+- siegeturtle
 
 This attribute supports providing an array of mounts (values separated by comma) meaning one or more values can be provided.  If any of the provided mounts are actively mounted, then the marker or trail is shown.
 
