@@ -25,7 +25,7 @@ jobs:
       - name: Generate site
         run: npm run build
       - name: Upload resulting website
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v1
         with:
           name: build
           path: build/
@@ -39,6 +39,7 @@ jobs:
           name: build
       - name: Replace docs
         run: |
+          ls -la /home/runner/
           mv /home/runner/work/gw2pathing-wiki/gw2pathing-wiki/build/* /home/runner/work/gw2pathing-wiki/gw2pathing-wiki/
           echo "gw2pathing.com" > /home/runner/work/gw2pathing-wiki/gw2pathing-wiki/CNAME
           git add -A
