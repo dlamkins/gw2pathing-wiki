@@ -25,7 +25,7 @@ jobs:
       - name: Generate site
         run: npm run build
       - name: Upload resulting website
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v4
         with:
           name: build
           path: build/
