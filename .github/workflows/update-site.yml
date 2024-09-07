@@ -33,6 +33,9 @@ jobs:
         with:
           ref: gh-pages
       - run: rm -rf *
+      - name: Debug check DIR
+        run: |
+          ls -la /home/runner/work/gw2pathing-wiki/gw2pathing-wiki/
       - name: Download website
         uses: actions/download-artifact@v4
         with:
