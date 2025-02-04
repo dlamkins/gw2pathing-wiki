@@ -30,6 +30,7 @@ A marker pack category.
 | [`Show`](#categoryshow) | Enables the category. |
 | [`Hide`](#categoryhide) | Disables the category. |
 | [`GetMarkers`](#categorygetmarkers)  | Returns all markers directly within the category. |
+| [`GetTrails`](#categorygettrails)  | Returns all trails directly within the category. |
 
 
 <br/>
@@ -124,6 +125,29 @@ local markers = myCategory:GetMarkers()
 
 for _, marker in ipairs(markers) do
     Debug:Print("Marker name: " .. marker.Name)
+end
+```
+<br/>
+---
+
+### <CodeHeader class="Category" function="GetTrails" params="getAll">Category\:GetTrails</CodeHeader>
+Returns all trails directly within the category.
+
+#### Parameters
+| Parameter | Type | Description |
+| :-------- | :--: | ----------- |
+| `getAll` | `boolean` | <OptionalTag/> If true, all child trails are returned. If false or not provided, only the trails directly within the category are returned. |
+
+#### Returns | [`Trail[]`](trail)
+A table of trails.
+
+#### Usage
+```lua title="script.lua"
+local myCategory = Category:GetOrAddCategoryFromNamespace("my.category.namespace")
+local trails = myCategory:GetTrails()
+
+for _, trail in ipairs(trails) do
+    Debug:Print("Found trail with guid: " .. Trail.Guid)
 end
 ```
 <br/>

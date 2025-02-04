@@ -25,6 +25,11 @@ const CategoryFunctions = [
         name: "GetMarkers",
         description: "Returns all markers directly within the category.",
         link: "/docs/lua-scripting/lua-lib/category#categorygetmarkers"
+    },
+    {
+        name: "GetTrails",
+        description: "Returns all trails directly within the category.",
+        link: "/docs/lua-scripting/lua-lib/category#categorygettrails"
     }
 ]
 
