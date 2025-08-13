@@ -19,7 +19,6 @@ ExamplePack.SpawnMarker = {
     -- Instead of a table, we'll just keep track of one spawned marker
     -- highlight-next-line
     spawnedMarker = nil,
-    category = World:CategoryByType("ep.marker.category")
 }
 
 Debug:Watch("SpawnMarker", ExamplePack.SpawnMarker)
@@ -33,7 +32,7 @@ local function spawnNewMarker()
     local new_marker_attr = {   
         MapVisibility = false,
         InGameVisibility = true,
-        Category = ExamplePack.SpawnMarker.category,
+        type = "ep.marker.category",
         -- Note the swapped Z and Y!
         -- highlight-start
         xpos = playerPos.X,
