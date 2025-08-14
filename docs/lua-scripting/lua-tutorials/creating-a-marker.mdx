@@ -22,31 +22,28 @@ It's a good idea to always set the category, so that the new marker can be hidde
 :::
 
 ```lua title="/Data/ExamplePack/Scripts/TriggerFunction.lua"
--- We can use the World global to get a reference to the category we want to use for our new marker
--- highlight-next-line
-local category = World:CategoryByType("ep.marker.category")
-
 function EP_TriggerFunction(marker, isAutoTrigger, customInput)
     -- For the most part, the attribute names are the same as you'd find in the xml
     -- highlight-start
-    local new_marker_attr = {   
+    local new_marker_attr = {
         MapVisibility = false,
         InGameVisibility = true,
-        Category = category, -- 
+        type = "ep.marker.category",
         xpos = marker.Position.X,
-        ypos = 0,
-        zpos = marker.Position.Z,
+        ypos = marker.Position.Z, -- Z and Y are swapped
+        zpos = marker.Position.Y,
         iconFile = "Data/ExamplePack/Markers/MarkerIcon.png",
     }
     -- highlight-end
 
     if isAutoTrigger then
         -- We can adjust the ypos after creating the initial table by just setting it again using the `.` accessor
+        -- Z and Y are swapped
         -- highlight-next-line
-        new_marker_attr.ypos = marker.Position.Y + 20
+        new_marker_attr.ypos = new_marker_attr.ypos + 5
     else
         -- highlight-next-line
-        new_marker_attr.ypos = marker.Position.Y + 50
+        new_marker_attr.ypos = new_marker_attr.ypos + 10
     end
 
     -- Create the marker
@@ -69,7 +66,6 @@ Let's take this one step further and make it so that interacting with the origin
         -- highlight-start
         ExamplePack.TriggerFunction = {
             activeMarkers = {},
-            category = World:CategoryByType("ep.marker.category")
         }
         -- highlight-end
 
@@ -80,36 +76,36 @@ Let's take this one step further and make it so that interacting with the origin
         -- We'll move the logic for spawning and removing markers to new functions
         -- highlight-next-line
         local function spawnNewMarker(marker, isAutoTrigger)
-            local new_marker_attr = {   
+            local new_marker_attr = {
                 MapVisibility = false,
                 InGameVisibility = true,
-                -- highlight-next-line
-                Category = ExamplePack.TriggerFunction.category,
+                type = "ep.marker.category",
                 xpos = marker.Position.X,
-                ypos = 0,
-                zpos = marker.Position.Z,
+                ypos = marker.Position.Z, -- Z and Y are swapped
+                zpos = marker.Position.Y,
                 iconFile = "Data/ExamplePack/Markers/MarkerIcon.png",
             }
 
             if isAutoTrigger then
-                new_marker_attr.ypos = marker.Position.Y + 20
+                new_marker_attr.ypos = new_marker_attr.ypos + 5
             else
-                new_marker_attr.ypos = marker.Position.Y + 50
+                new_marker_attr.ypos = new_marker_attr.ypos + 10
             end
 
             local new_marker = Pack:CreateMarker(new_marker_attr)
+
             -- Let's use the trigger marker's GUID to keep track of it's spawned marker
             -- highlight-next-line
-            ExamplePack.TriggerFunction.activeMarkers[marker.GUID] = new_marker
+            ExamplePack.TriggerFunction.activeMarkers[marker.Guid] = new_marker
         end
 
         -- Given a GUID, we can remove the marker from the world and then remove it's reference from our table
         -- highlight-start
         local function removeNewMarker(guid)
-            local spawnedMarker = ExamplePack.TriggerFunction.activeMarkers[marker.GUID]
+            local spawnedMarker = ExamplePack.TriggerFunction.activeMarkers[guid]
             if spawnedMarker then
                 spawnedMarker:Remove()
-                ExamplePack.TriggerFunction.activeMarkers[marker.GUID] = nil
+                ExamplePack.TriggerFunction.activeMarkers[guid] = nil
             end
         end
         -- highlight-end
@@ -119,8 +115,8 @@ Let's take this one step further and make it so that interacting with the origin
         function EP_TriggerFunction(marker, isAutoTrigger)
             -- Now we can just perform the check here and offload the logic to the new functions
             -- highlight-start
-            if ExamplePack.TriggerFunction.activeMarkers[marker.GUID] ~= nil then
-                removeNewMarker(marker.GUID)
+            if ExamplePack.TriggerFunction.activeMarkers[marker.Guid] ~= nil then
+                removeNewMarker(marker.Guid)
             else
                 spawnNewMarker(marker, isAutoTrigger)
             end
