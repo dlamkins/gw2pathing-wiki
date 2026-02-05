@@ -4,7 +4,7 @@ title: Festival
 description: Hides the marker or trail if one of the specified festivals is not active.
 hide_table_of_contents: true
 ---
-| Applies To | | Blish HUD (Pathing) | TacO | Burrito |
+| Applies To | | Pathing (Blish HUD) | TacO | Burrito |
 |-|-|-|-|-|
 | <center>Markers, Trails</center> | | <center>✔</center> | <center>❌</center> | <center>❌</center> |
 

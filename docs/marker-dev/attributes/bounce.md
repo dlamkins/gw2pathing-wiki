@@ -4,7 +4,7 @@ title: Bounce
 description: Allows a marker to "bounce" or rise up out of the way when triggered.
 hide_table_of_contents: true
 ---
-| Applies To | | Blish HUD (Pathing) | TacO | Burrito |
+| Applies To | | Pathing (Blish HUD) | TacO | Burrito |
 |-|-|-|-|-|
 | <center>Markers</center> | | <center>✔</center> | <center>❌</center> | <center>❌</center> |
 

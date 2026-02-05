@@ -4,7 +4,7 @@ title: Schedule
 description: Hides the marker outside of the specified schedule. Good for showing markers only during their associated scheduled meta event, day of the week, etc. All scheduling is based on UTC.
 hide_table_of_contents: true
 ---
-| Applies To | | Blish HUD (Pathing) | TacO | Burrito |
+| Applies To | | Pathing (Blish HUD) | TacO | Burrito |
 |-|-|-|-|-|
 | <center>Trails, Markers</center> | | <center>✔</center> | <center>❌</center> | <center>❌</center> |
 

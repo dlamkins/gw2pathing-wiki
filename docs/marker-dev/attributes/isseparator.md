@@ -4,7 +4,7 @@ title: IsSeparator
 description: Determines if the category should be treated as a separator or "header" instead of a category. Allows you to split up your category menus with section headers which will not show toggles or categories.
 hide_table_of_contents: true
 ---
-| Applies To | | Blish HUD (Pathing) | TacO | Burrito |
+| Applies To | | Pathing (Blish HUD) | TacO | Burrito |
 |-|-|-|-|-|
 | <center>Category</center> | | <center>✔</center> | <center>✔</center> | <center>❌</center> |
 

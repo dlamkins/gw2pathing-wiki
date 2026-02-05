@@ -4,7 +4,7 @@ title: Toggle
 description: Toggles a category on or off.  Similar in behavior to the [Show & Hide](/docs/marker-dev/attributes/showhide) attributes.
 hide_table_of_contents: true
 ---
-| Applies To | | Blish HUD (Pathing) | TacO | Burrito |
+| Applies To | | Pathing (Blish HUD) | TacO | Burrito |
 |-|-|-|-|-|
 | <center>Markers</center> | | <center>✔</center> | <center>✔</center> | <center>❌</center> |
 

@@ -4,7 +4,7 @@ title: Visibility
 description: Visibility attributes allow you to indicate where a marker or trail should be shown. By default, markers and trails are visible on the minimap (compass), fullscreen map, and in-game.
 hide_table_of_contents: true
 ---
-| Applies To | | Blish HUD (Pathing) | TacO | Burrito |
+| Applies To | | Pathing (Blish HUD) | TacO | Burrito |
 |-|-|-|-|-|
 | <center>Markers, Trails</center> | | <center>✔</center> | <center>✔</center> | <center>❌</center> |
 

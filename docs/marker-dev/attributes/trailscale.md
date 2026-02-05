@@ -4,7 +4,7 @@ title: TrailScale
 description: Allows you to apply a width modifier to a trail.
 hide_table_of_contents: true
 ---
-| Applies To | | Blish HUD (Pathing) | TacO | Burrito |
+| Applies To | | Pathing (Blish HUD) | TacO | Burrito |
 |-|-|-|-|-|
 | <center>Trails</center> | | <center>✔</center> | <center>✔</center> | <center>❌</center> |
 

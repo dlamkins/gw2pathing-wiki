@@ -4,7 +4,7 @@ title: TriggerRange
 description: Used to indicate a trigger range. This attribute is used by multiple other attributes to define a distance from the marker in which those attributes will activate their functionality or behavior.
 hide_table_of_contents: true
 ---
-| Applies To | | Blish HUD (Pathing) | TacO | Burrito |
+| Applies To | | Pathing (Blish HUD) | TacO | Burrito |
 |-|-|-|-|-|
 | <center>Markers</center> | | <center>✔</center> | <center>✔</center> | <center>❌</center> |
 

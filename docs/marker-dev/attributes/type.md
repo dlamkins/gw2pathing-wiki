@@ -4,7 +4,7 @@ title: Type
 description: Indicates which category a marker or trail belongs to. The type represents the tree of category name attributes delimited by periods. **All markers and trails should have a type.**
 hide_table_of_contents: true
 ---
-| Applies To | | Blish HUD (Pathing) | TacO | Burrito |
+| Applies To | | Pathing (Blish HUD) | TacO | Burrito |
 |-|-|-|-|-|
 | <center>Markers, Trails</center> | | <center>✔</center> | <center>✔</center> | <center>✔</center> |
 

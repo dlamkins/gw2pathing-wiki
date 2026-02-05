@@ -4,7 +4,7 @@ title: Tip
 description: Allows you to display a tooltip on markers on the minimap or categories in the category dropdown.
 hide_table_of_contents: true
 ---
-| Applies To | | Blish HUD (Pathing) | TacO | Burrito |
+| Applies To | | Pathing (Blish HUD) | TacO | Burrito |
 |-|-|-|-|-|
 | <center>Markers, Category</center> | | <center>✔</center> | <center>❌</center> | <center>❌</center> |
 

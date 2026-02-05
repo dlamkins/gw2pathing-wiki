@@ -4,7 +4,7 @@ title: ScaleOnMapWithZoom
 description: Determines if the marker should scale when the user zooms in and out of their map.
 hide_table_of_contents: true
 ---
-| Applies To | | Blish HUD (Pathing) | TacO | Burrito |
+| Applies To | | Pathing (Blish HUD) | TacO | Burrito |
 |-|-|-|-|-|
 | <center>Markers</center> | | <center>✔</center> | <center>✔</center> | <center>❌</center> |
 

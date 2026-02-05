@@ -4,7 +4,7 @@ title: IsWall
 description: If the trail should be displayed on its side as a wall instead of a flat trail. Good for indicating a boundary.
 hide_table_of_contents: true
 ---
-| Applies To | | Blish HUD (Pathing) | TacO | Burrito |
+| Applies To | | Pathing (Blish HUD) | TacO | Burrito |
 |-|-|-|-|-|
 | <center>Trails</center> | | <center>✔</center> | <center>❌</center> | <center>❌</center> |
 

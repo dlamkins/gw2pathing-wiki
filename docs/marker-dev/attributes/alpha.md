@@ -4,7 +4,7 @@ title: Alpha
 description: Specifies the opacity of a marker or trail where 1 is opaque and 0 is fully transparent. Values outside of this range will be clamped to this range.
 hide_table_of_contents: true
 ---
-| Applies To | | Blish HUD (Pathing) | TacO | Burrito |
+| Applies To | | Pathing (Blish HUD) | TacO | Burrito |
 |-|-|-|-|-|
 | <center>Markers, Trails</center> | | <center>✔</center> | <center>✔</center> | <center>❌</center> |
 

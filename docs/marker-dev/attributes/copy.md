@@ -4,7 +4,7 @@ title: Copy
 description: Allows you to set a value to the users clipboard. Good for providing waypoints, build templates, and more.
 hide_table_of_contents: true
 ---
-| Applies To | | Blish HUD (Pathing) | TacO | Burrito |
+| Applies To | | Pathing (Blish HUD) | TacO | Burrito |
 |-|-|-|-|-|
 | <center>Category, Markers</center> | | <center>✔</center> | <center>✔</center> | <center>❌</center> |
 

@@ -4,7 +4,7 @@ title: Cull
 description: By default markers and trails are rendered without culling meaning that both sides are rendered at all times. Alternative culling settings allow you to enable culling for one side or the other. For example, a trail can be made to be visible when viewed from below.
 hide_table_of_contents: true
 ---
-| Applies To | | Blish HUD (Pathing) | TacO | Burrito |
+| Applies To | | Pathing (Blish HUD) | TacO | Burrito |
 |-|-|-|-|-|
 | <center>Markers, Trails</center> | | <center>✔</center> | <center>❌</center> | <center>❌</center> |
 

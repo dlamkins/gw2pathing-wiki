@@ -4,7 +4,7 @@ title: AnimSpeed
 description: The speed in which the texture will move along a trail. By default, this value is 1. A value of 0 disables the trail animation.
 hide_table_of_contents: true
 ---
-| Applies To | | Blish HUD (Pathing) | TacO | Burrito |
+| Applies To | | Pathing (Blish HUD) | TacO | Burrito |
 |-|-|-|-|-|
 | <center>Trails</center> | | <center>✔</center> | <center>✔</center> | <center>❌</center> |
 

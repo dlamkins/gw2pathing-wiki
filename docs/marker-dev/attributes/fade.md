@@ -4,7 +4,7 @@ title: Fade
 description: Indicates the distance that markers or trails should begin to fade and the distance where they are fully faded.  These attributes are important to keep from polluting the user's view and keep only what's important visible on screen.  This attribute is unaffected and unrelated to [CanFade](canfade).
 hide_table_of_contents: true
 ---
-| Applies To | | Blish HUD (Pathing) | TacO | Burrito |
+| Applies To | | Pathing (Blish HUD) | TacO | Burrito |
 |-|-|-|-|-|
 | <center>Markers, Trails</center> | | <center>✔</center> | <center>✔</center> | <center>❌</center> |
 

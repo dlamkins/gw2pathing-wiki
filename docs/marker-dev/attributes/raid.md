@@ -4,7 +4,7 @@ title: Raid
 description: Hides markers and trails based on their associated raid completion status reported by the web API.
 hide_table_of_contents: true
 ---
-| Applies To | | Blish HUD (Pathing) | TacO | Burrito |
+| Applies To | | Pathing (Blish HUD) | TacO | Burrito |
 |-|-|-|-|-|
 | <center>Markers, Trails</center> | | <center>✔</center> | <center>❌</center> | <center>❌</center> |
 

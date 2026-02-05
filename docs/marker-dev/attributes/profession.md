@@ -4,7 +4,7 @@ title: Profession
 description: Hides the marker or trail if the player is not currently one of the specified professions.
 hide_table_of_contents: true
 ---
-| Applies To | | Blish HUD (Pathing) | TacO | Burrito |
+| Applies To | | Pathing (Blish HUD) | TacO | Burrito |
 |-|-|-|-|-|
 | <center>Trails, Markers</center> | | <center>✔</center> | <center>❌</center> | <center>❌</center> |
 

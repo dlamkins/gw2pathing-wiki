@@ -4,7 +4,7 @@ title: InvertBehavior
 description: If enabled, the [behavior](/docs/marker-dev/attributes/behavior) filter is inverted.  By taking advantage of duplicate [GUIDs](/docs/marker-dev/attributes/guid) on a second marker you can have markers which are displayed only while the triggered marker is hidden.
 hide_table_of_contents: true
 ---
-| Applies To | | Blish HUD (Pathing) | TacO | Burrito |
+| Applies To | | Pathing (Blish HUD) | TacO | Burrito |
 |-|-|-|-|-|
 | <center>Markers</center> | | <center>✔</center> | <center>❌</center> | <center>❌</center> |
 

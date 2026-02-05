@@ -4,7 +4,7 @@ title: IconFile
 description: Used to identify the image used for a marker. The value is the path relative to the base of the markerpack archive.
 hide_table_of_contents: true
 ---
-| Applies To | | Blish HUD (Pathing) | TacO | Burrito |
+| Applies To | | Pathing (Blish HUD) | TacO | Burrito |
 |-|-|-|-|-|
 | <center>Markers</center> | | <center>✔</center> | <center>✔</center> | <center>✔</center> |
 

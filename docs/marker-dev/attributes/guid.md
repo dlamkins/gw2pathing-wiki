@@ -4,7 +4,7 @@ title: GUID
 description: A unique identifier used to track the state of certain behaviors between launch sessions.
 hide_table_of_contents: true
 ---
-| Applies To | | Blish HUD (Pathing) | TacO | Burrito |
+| Applies To | | Pathing (Blish HUD) | TacO | Burrito |
 |-|-|-|-|-|
 | <center>Markers, Trails</center> | | <center>✔</center> | <center>✔</center> | <center>❌</center> |
 
