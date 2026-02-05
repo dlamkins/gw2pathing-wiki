@@ -10,7 +10,7 @@ hide_table_of_contents: true
 
 
 :::info 
-In Blish HUD, users can override the max fade distance by adjusting their **Max View Distance** slider setting.
+In Pathing, users can override the max fade distance by adjusting their **Max View Distance** slider setting.
 :::
 
 

@@ -16,7 +16,7 @@ Then manually fill in the achievement bits. For achievements that actually utili
 
 ![SYWMAMP17.png](/img/pathing/guides/sywmamp/SYWMAMP17.png)
 
-Cool, so they look nice, and hide based on achievement progress. Stellar. But what if one or all of those are in a REAL TRICKY spot? The kind of spot that could benefit form some good old-fashioned text guidance? Meet tip-name and tip-description! Now these are specific to Blish HUD. They allow you to display hover text on the minimap/world map. Handy right? So now we'd like to display the token number (as listed in the achievements pane) as well as the description given so your users don't need to keep the hero panel or wiki open for guidance. After all that's the point of an overlay! To have the information available while you're in game!
+Cool, so they look nice, and hide based on achievement progress. Stellar. But what if one or all of those are in a REAL TRICKY spot? The kind of spot that could benefit form some good old-fashioned text guidance? Meet tip-name and tip-description! Now these are specific to Blish HUD's Pathing module. They allow you to display hover text on the minimap/world map. Handy right? So now we'd like to display the token number (as listed in the achievements pane) as well as the description given so your users don't need to keep the hero panel or wiki open for guidance. After all that's the point of an overlay! To have the information available while you're in game!
 
 One more Find and Replace, but then quite a bit of manual copy-pasta. Nobody said making a killer pack was easy work, but your users will thank you! `GUID` becomes `tip-name="Token " tip-description="" GUID`
 

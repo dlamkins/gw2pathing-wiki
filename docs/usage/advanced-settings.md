@@ -12,7 +12,7 @@ These settings are not available within the UI and require a restart of the Path
 
 ### marker-load-paths
 
-A set of directory paths to also check for marker packs to load.  For example, while developing a marker pack in TacO, you can include TacO's marker folder so that Blish HUD can read the pack at the same time.
+A set of directory paths to also check for marker packs to load.  For example, while developing a marker pack in TacO, you can include TacO's marker folder so that Pathing can read the pack at the same time.
 
 ```yaml
 marker-load-paths:

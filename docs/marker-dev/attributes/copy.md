@@ -10,7 +10,7 @@ hide_table_of_contents: true
 
 
 :::warning 
-TacO does not support the copy attribute on category separators like Blish HUD does.
+TacO does not support the copy attribute on category separators like Pathing does.
 :::
 
 

@@ -14,7 +14,7 @@ The XML files are the main component of a marker pack and are what define all ma
 
 ### Trail Files (.trl)
 
-Trail files each represent a trail to be displayed and contain the data necessary to rebuild them in the world.  You can use TacO or TrlTool to create these files.  Blish HUD's pathing module does not have a tool to do this yet.
+Trail files each represent a trail to be displayed and contain the data necessary to rebuild them in the world.  You can use TacO or TrlTool to create these files.
 
 ### Texture Files (.png, etc.)
 

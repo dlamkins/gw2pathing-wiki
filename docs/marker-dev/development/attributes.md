@@ -13,13 +13,13 @@ Attributes are used to modify the behavior, appearance, and functionality of mar
 
 ## Exclusive Attributes
 
-Be mindful that there are some attributes exclusively supported by Blish HUD.
+Be mindful that there are some attributes exclusively supported by Blish HUD's Pathing module.
 
-Blish HUD exclusive attributes will be silently ignored in TacO.  That means that any behaviors or other effects they would normally provide in Blish HUD will not occur at all in TacO.  Packs using Blish HUD exclusive attributes will still otherwise run in TacO without issue.
+Pathing exclusive attributes will be silently ignored in TacO and other overlays.  That means that any behaviors or other effects they would normally provide in Pathing will not occur at all in TacO.  Packs using Pathing exclusive attributes will still otherwise run in TacO without issue.
 
 :::info Need help or feedback?
 
-If you need assistance or would like to provide suggestions for future attributes in Blish HUD, join our [Discord channel](https://discord.gg/FYKN3qh)!
+If you need assistance or would like to provide suggestions for future attributes, join the [Blish HUD Discord channel](https://discord.gg/FYKN3qh)!
 
 :::
 
@@ -48,11 +48,11 @@ If you need assistance or would like to provide suggestions for future attribute
 
 ## Attribute Prefixes
 
-Blish HUD supports prefixed attributes.  This is to say that any attribute prefixed by `bh-` will be stripped of its prefix and used as a normal attribute.  This allows you to create markers, trails, and categories that differ in functionality depending on if the pack is loaded by Blish HUD or TacO.  This works because TacO will ignore these attributes entirely as they don't match any of its supported attributes.
+Pathing supports prefixed attributes.  This is to say that any attribute prefixed by `bh-` will be stripped of its prefix and used as a normal attribute.  This allows you to create markers, trails, and categories that differ in functionality depending on if the pack is loaded by Pathing or TacO.  This works because TacO will ignore these attributes entirely as they don't match any of its supported attributes.
 
 **Example:**
 ```xml
-<MarkerCategory name="overlay" displayname="You're using TacO!" bh-displayname="You're using Blish HUD!" />
+<MarkerCategory name="overlay" displayname="You're using TacO!" bh-displayname="You're using Blish HUD's Pathing module!" />
 ```
 
 :::caution
@@ -63,7 +63,7 @@ When using prefixed attributes, ensure they are specified after the attribute yo
 
 ## Attribute Values
 
-As the marker pack format is XML based, there are limitations to what characters can be used as an attribute value.  The table below indicates the values that must be escaped in order to be considered proper XML.  Both Blish HUD and TacO have forgiving XML parsers which will do their best to interpret the value, but not all libraries or overlays are capable of this.  For the best result, you the table below when using any of the specified characters.
+As the marker pack format is XML based, there are limitations to what characters can be used as an attribute value.  The table below indicates the values that must be escaped in order to be considered proper XML.  Both Pathing and TacO have forgiving XML parsers which will do their best to interpret the value, but not all libraries or overlays are capable of this.  For the best result, you the table below when using any of the specified characters.
 
 | Character | Escaped Value |
 |-|-|

@@ -13,7 +13,7 @@ I'm gonna link back to https://gw2pathing.com/docs/marker-dev/attributes/achieve
 - Marker tied to an achievement but not a bit or you want to be able to toggle them off until reset? behavior's for you.
 - Showing off skips in a jumping puzzle, but they can only be done if you have a shadowstep? profession or specialization restrict them from showing if you're not playing that class.
 - Want markers to only show at night because you can't progress the achievement during the day? schedule them!
-Every attribute page also tells you whether it works on TacO or just Blish HUD.
+Every attribute page also tells you whether it works on TacO or just Blish HUD's Pathing module.
 
 A final look in game at the new markers!
 
