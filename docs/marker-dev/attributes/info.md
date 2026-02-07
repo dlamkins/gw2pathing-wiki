@@ -4,9 +4,9 @@ title: Info
 description: Allows you to show text on screen while the user is in range of the marker.
 hide_table_of_contents: true
 ---
-| Applies To | | Pathing (Blish HUD) | TacO | Burrito |
+| Applies To | | Pathing (Blish HUD) | TacO | TaimiHUD | Burrito |
 |-|-|-|-|-|
-| <center>Markers</center> | | <center>✔</center> | <center>✔</center> | <center>❌</center> |
+| <center>Markers</center> | | <center>✔</center> | <center>✔</center> | <center>❌</center> | <center>❌</center> |
 
 
 

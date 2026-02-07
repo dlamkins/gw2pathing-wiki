@@ -4,9 +4,9 @@ title: DisplayName
 description: The name shown in the category dropdown menus.
 hide_table_of_contents: true
 ---
-| Applies To | | Pathing (Blish HUD) | TacO | Burrito |
+| Applies To | | Pathing (Blish HUD) | TacO | TaimiHUD | Burrito |
 |-|-|-|-|-|
-| <center>Category</center> | | <center>✔</center> | <center>✔</center> | <center>❌</center> |
+| <center>Category</center> | | <center>✔</center> | <center>✔</center> | <center>✔</center> | <center>❌</center> |
 
 
 

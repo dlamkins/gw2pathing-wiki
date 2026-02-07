@@ -4,9 +4,9 @@ title: Achievement
 description: Hides markers and trails based on their associated completion status reported by the web API.
 hide_table_of_contents: true
 ---
-| Applies To | | Pathing (Blish HUD) | TacO | Burrito |
+| Applies To | | Pathing (Blish HUD) | TacO | TaimiHUD | Burrito |
 |-|-|-|-|-|
-| <center>Markers, Trails</center> | | <center>✔</center> | <center>✔</center> | <center>❌</center> |
+| <center>Markers, Trails</center> | | <center>✔</center> | <center>✔</center> | <center>✔</center> | <center>❌</center> |
 
 
 :::info 

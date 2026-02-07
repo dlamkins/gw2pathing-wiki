@@ -4,9 +4,9 @@ title: ShowHide
 description: Allows showing or hiding a specified category when triggered.  Similar in behavior to the [Toggle](/docs/marker-dev/attributes/toggle) attribute.
 hide_table_of_contents: true
 ---
-| Applies To | | Pathing (Blish HUD) | TacO | Burrito |
+| Applies To | | Pathing (Blish HUD) | TacO | TaimiHUD | Burrito |
 |-|-|-|-|-|
-| <center>Markers</center> | | <center>✔</center> | <center>❌</center> | <center>❌</center> |
+| <center>Markers</center> | | <center>✔</center> | <center>❌</center> | <center>❌</center> | <center>❌</center> |
 
 
 

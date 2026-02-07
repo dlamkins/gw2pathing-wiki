@@ -4,9 +4,9 @@ title: Script
 description: Allows you to trigger Lua functions or determine if a marker is visible using a Lua function.
 hide_table_of_contents: true
 ---
-| Applies To | | Pathing (Blish HUD) | TacO | Burrito |
+| Applies To | | Pathing (Blish HUD) | TacO | TaimiHUD | Burrito |
 |-|-|-|-|-|
-| <center>Markers</center> | | <center>✔</center> | <center>❌</center> | <center>❌</center> |
+| <center>Markers</center> | | <center>✔</center> | <center>❌</center> | <center>❌</center> | <center>❌</center> |
 
 
 :::info 

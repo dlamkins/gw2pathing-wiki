@@ -4,9 +4,9 @@ title: CanFade
 description: Allows a marker or trail to ignore fade features such as those which hide trails around the player or between the user and their camera.
 hide_table_of_contents: true
 ---
-| Applies To | | Pathing (Blish HUD) | TacO | Burrito |
+| Applies To | | Pathing (Blish HUD) | TacO | TaimiHUD | Burrito |
 |-|-|-|-|-|
-| <center>Markers, Trails</center> | | <center>✔</center> | <center>❌</center> | <center>❌</center> |
+| <center>Markers, Trails</center> | | <center>✔</center> | <center>❌</center> | <center>❌</center> | <center>❌</center> |
 
 
 :::caution 

@@ -4,9 +4,9 @@ title: Texture
 description: Used to identify the image used for a trail. The value is the path relative to the base of the marker pack archive. The image is repeated along the length of the trail.
 hide_table_of_contents: true
 ---
-| Applies To | | Pathing (Blish HUD) | TacO | Burrito |
+| Applies To | | Pathing (Blish HUD) | TacO | TaimiHUD | Burrito |
 |-|-|-|-|-|
-| <center>Trails</center> | | <center>✔</center> | <center>✔</center> | <center>✔</center> |
+| <center>Trails</center> | | <center>✔</center> | <center>✔</center> | <center>✔</center> | <center>✔</center> |
 
 
 

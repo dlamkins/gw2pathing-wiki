@@ -4,9 +4,9 @@ title: DefaultToggle
 description: Indicates if the category should be enabled by default.
 hide_table_of_contents: true
 ---
-| Applies To | | Pathing (Blish HUD) | TacO | Burrito |
+| Applies To | | Pathing (Blish HUD) | TacO | TaimiHUD | Burrito |
 |-|-|-|-|-|
-| <center>Category</center> | | <center>✔</center> | <center>✔</center> | <center>❌</center> |
+| <center>Category</center> | | <center>✔</center> | <center>✔</center> | <center>❌</center> | <center>❌</center> |
 
 
 

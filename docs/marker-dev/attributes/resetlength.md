@@ -4,9 +4,9 @@ title: ResetLength
 description: When using behavior 4 (reappear after timer) this value defines, in seconds, the duration until the marker is reset after being activated.
 hide_table_of_contents: true
 ---
-| Applies To | | Pathing (Blish HUD) | TacO | Burrito |
+| Applies To | | Pathing (Blish HUD) | TacO | TaimiHUD | Burrito |
 |-|-|-|-|-|
-| <center>Markers</center> | | <center>✔</center> | <center>✔</center> | <center>❌</center> |
+| <center>Markers</center> | | <center>✔</center> | <center>✔</center> | <center>✔</center> | <center>❌</center> |
 
 
 :::warning 

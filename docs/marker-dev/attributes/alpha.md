@@ -4,10 +4,14 @@ title: Alpha
 description: Specifies the opacity of a marker or trail where 1 is opaque and 0 is fully transparent. Values outside of this range will be clamped to this range.
 hide_table_of_contents: true
 ---
-| Applies To | | Pathing (Blish HUD) | TacO | Burrito |
+| Applies To | | Pathing (Blish HUD) | TacO | TaimiHUD | Burrito |
 |-|-|-|-|-|
-| <center>Markers, Trails</center> | | <center>✔</center> | <center>✔</center> | <center>❌</center> |
+| <center>Markers, Trails</center> | | <center>✔</center> | <center>✔</center> | <center>✔</center> | <center>❌</center> |
 
+
+:::warning TaimiHUD Support
+TaimiHUD only supports alpha applied to markers, not trails.
+:::
 
 
 ## Description

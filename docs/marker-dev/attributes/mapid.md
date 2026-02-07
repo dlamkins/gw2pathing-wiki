@@ -4,9 +4,9 @@ title: MapID
 description: Defines which map the marker should be displayed on.  A list of maps and their ID can be found via the Guild Wars 2 Web API - https://api.guildwars2.com/v2/maps?ids=all
 hide_table_of_contents: true
 ---
-| Applies To | | Pathing (Blish HUD) | TacO | Burrito |
+| Applies To | | Pathing (Blish HUD) | TacO | TaimiHUD | Burrito |
 |-|-|-|-|-|
-| <center>Markers</center> | | <center>✔</center> | <center>✔</center> | <center>✔</center> |
+| <center>Markers</center> | | <center>✔</center> | <center>✔</center> | <center>✔</center> | <center>✔</center> |
 
 
 

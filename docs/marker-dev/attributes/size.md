@@ -4,9 +4,9 @@ title: Size
 description: Specifies the minimum or maximum size of a marker on screen measured in pixels. The marker will continue to grow or shrink based on distance but will stop when reaching the specified minimum or maximum.
 hide_table_of_contents: true
 ---
-| Applies To | | Pathing (Blish HUD) | TacO | Burrito |
+| Applies To | | Pathing (Blish HUD) | TacO | TaimiHUD | Burrito |
 |-|-|-|-|-|
-| <center>Markers</center> | | <center>✔</center> | <center>✔</center> | <center>❌</center> |
+| <center>Markers</center> | | <center>✔</center> | <center>✔</center> | <center>❌</center> | <center>❌</center> |
 
 
 :::caution 

@@ -4,13 +4,13 @@ title: Festival
 description: Hides the marker or trail if one of the specified festivals is not active.
 hide_table_of_contents: true
 ---
-| Applies To | | Pathing (Blish HUD) | TacO | Burrito |
+| Applies To | | Pathing (Blish HUD) | TacO | TaimiHUD | Burrito |
 |-|-|-|-|-|
-| <center>Markers, Trails</center> | | <center>✔</center> | <center>❌</center> | <center>❌</center> |
+| <center>Markers, Trails</center> | | <center>✔</center> | <center>✔</center> | <center>✔</center> | <center>❌</center> |
 
 
-:::warning 
-TacO had preliminary support for this feature, but relies on an implementation which no longer works.
+:::warning TacO Support
+TacO had preliminary support for this feature, but relies on an implementation which no longer works.  Users must manually override the active festival.
 :::
 
 

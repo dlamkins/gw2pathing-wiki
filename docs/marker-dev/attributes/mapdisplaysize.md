@@ -4,9 +4,9 @@ title: MapDisplaySize
 description: The size, in pixels, that the marker should be shown on the minimap or fullscreen map.  Assuming [ScaleOnMapWithZoom](scaleonmapwithzoom) is enabled (it is by default), the measurement will be scaled as the user zooms further out.
 hide_table_of_contents: true
 ---
-| Applies To | | Pathing (Blish HUD) | TacO | Burrito |
+| Applies To | | Pathing (Blish HUD) | TacO | TaimiHUD | Burrito |
 |-|-|-|-|-|
-| <center>Markers</center> | | <center>✔</center> | <center>✔</center> | <center>❌</center> |
+| <center>Markers</center> | | <center>✔</center> | <center>✔</center> | <center>✔</center> | <center>❌</center> |
 
 
 :::caution 
