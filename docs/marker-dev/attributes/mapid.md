@@ -5,7 +5,7 @@ description: Defines which map the marker should be displayed on.  A list of map
 hide_table_of_contents: true
 ---
 | Applies To | | Pathing (Blish HUD) | TacO | TaimiHUD | Burrito |
-|-|-|-|-|-|
+|-|-|-|-|-|-|
 | <center>Markers</center> | | <center>✔</center> | <center>✔</center> | <center>✔</center> | <center>✔</center> |
 
 

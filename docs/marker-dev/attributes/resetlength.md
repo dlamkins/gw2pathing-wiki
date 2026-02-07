@@ -5,7 +5,7 @@ description: When using behavior 4 (reappear after timer) this value defines, in
 hide_table_of_contents: true
 ---
 | Applies To | | Pathing (Blish HUD) | TacO | TaimiHUD | Burrito |
-|-|-|-|-|-|
+|-|-|-|-|-|-|
 | <center>Markers</center> | | <center>✔</center> | <center>✔</center> | <center>✔</center> | <center>❌</center> |
 
 

@@ -5,7 +5,7 @@ description: The speed in which the texture will move along a trail. By default,
 hide_table_of_contents: true
 ---
 | Applies To | | Pathing (Blish HUD) | TacO | TaimiHUD | Burrito |
-|-|-|-|-|-|
+|-|-|-|-|-|-|
 | <center>Trails</center> | | <center>✔</center> | <center>✔</center> | <center>❌</center> | <center>❌</center> |
 
 

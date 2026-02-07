@@ -5,7 +5,7 @@ description: Used to identify the image used for a marker. The value is the path
 hide_table_of_contents: true
 ---
 | Applies To | | Pathing (Blish HUD) | TacO | TaimiHUD | Burrito |
-|-|-|-|-|-|
+|-|-|-|-|-|-|
 | <center>Markers</center> | | <center>✔</center> | <center>✔</center> | <center>✔</center> | <center>✔</center> |
 
 

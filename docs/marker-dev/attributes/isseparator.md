@@ -5,7 +5,7 @@ description: Determines if the category should be treated as a separator or "hea
 hide_table_of_contents: true
 ---
 | Applies To | | Pathing (Blish HUD) | TacO | TaimiHUD | Burrito |
-|-|-|-|-|-|
+|-|-|-|-|-|-|
 | <center>Category</center> | | <center>✔</center> | <center>✔</center> | <center>✔</center> | <center>❌</center> |
 
 

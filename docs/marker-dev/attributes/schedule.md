@@ -5,7 +5,7 @@ description: Hides the marker outside of the specified schedule. Good for showin
 hide_table_of_contents: true
 ---
 | Applies To | | Pathing (Blish HUD) | TacO | TaimiHUD | Burrito |
-|-|-|-|-|-|
+|-|-|-|-|-|-|
 | <center>Trails, Markers</center> | | <center>✔</center> | <center>❌</center> | <center>✔</center> | <center>❌</center> |
 
 

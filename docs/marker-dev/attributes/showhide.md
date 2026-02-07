@@ -5,7 +5,7 @@ description: Allows showing or hiding a specified category when triggered.  Simi
 hide_table_of_contents: true
 ---
 | Applies To | | Pathing (Blish HUD) | TacO | TaimiHUD | Burrito |
-|-|-|-|-|-|
+|-|-|-|-|-|-|
 | <center>Markers</center> | | <center>✔</center> | <center>❌</center> | <center>❌</center> | <center>❌</center> |
 
 

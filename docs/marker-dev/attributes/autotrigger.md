@@ -5,7 +5,7 @@ description: If enabled, attributes and behaviors which would normally require a
 hide_table_of_contents: true
 ---
 | Applies To | | Pathing (Blish HUD) | TacO | TaimiHUD | Burrito |
-|-|-|-|-|-|
+|-|-|-|-|-|-|
 | <center>Markers</center> | | <center>✔</center> | <center>✔</center> | <center>✔</center> | <center>❌</center> |
 
 

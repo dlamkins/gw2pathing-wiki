@@ -5,7 +5,7 @@ description: Resets GUID(s) so that another behavior is no longer filtering them
 hide_table_of_contents: true
 ---
 | Applies To | | Pathing (Blish HUD) | TacO | TaimiHUD | Burrito |
-|-|-|-|-|-|
+|-|-|-|-|-|-|
 | <center>Markers</center> | | <center>✔</center> | <center>❌</center> | <center>❌</center> | <center>❌</center> |
 
 

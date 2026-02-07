@@ -5,7 +5,7 @@ description: If the trail should be displayed on its side as a wall instead of a
 hide_table_of_contents: true
 ---
 | Applies To | | Pathing (Blish HUD) | TacO | TaimiHUD | Burrito |
-|-|-|-|-|-|
+|-|-|-|-|-|-|
 | <center>Trails</center> | | <center>✔</center> | <center>❌</center> | <center>✔</center> | <center>❌</center> |
 
 

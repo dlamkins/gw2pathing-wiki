@@ -5,7 +5,7 @@ description: Indicates which category a marker or trail belongs to. The type rep
 hide_table_of_contents: true
 ---
 | Applies To | | Pathing (Blish HUD) | TacO | TaimiHUD | Burrito |
-|-|-|-|-|-|
+|-|-|-|-|-|-|
 | <center>Markers, Trails</center> | | <center>✔</center> | <center>✔</center> | <center>✔</center> | <center>✔</center> |
 
 

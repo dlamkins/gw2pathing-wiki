@@ -5,7 +5,7 @@ description: Allows a marker or trail to ignore fade features such as those whic
 hide_table_of_contents: true
 ---
 | Applies To | | Pathing (Blish HUD) | TacO | TaimiHUD | Burrito |
-|-|-|-|-|-|
+|-|-|-|-|-|-|
 | <center>Markers, Trails</center> | | <center>✔</center> | <center>❌</center> | <center>❌</center> | <center>❌</center> |
 
 

@@ -5,7 +5,7 @@ description: Hides the marker or trail if the current map is not one of the spec
 hide_table_of_contents: true
 ---
 | Applies To | | Pathing (Blish HUD) | TacO | TaimiHUD | Burrito |
-|-|-|-|-|-|
+|-|-|-|-|-|-|
 | <center>Markers, Trails</center> | | <center>✔</center> | <center>❌</center> | <center>✔</center> | <center>❌</center> |
 
 

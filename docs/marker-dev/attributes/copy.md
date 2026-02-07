@@ -5,7 +5,7 @@ description: Allows you to set a value to the users clipboard. Good for providin
 hide_table_of_contents: true
 ---
 | Applies To | | Pathing (Blish HUD) | TacO | TaimiHUD | Burrito |
-|-|-|-|-|-|
+|-|-|-|-|-|-|
 | <center>Category, Markers</center> | | <center>✔</center> | <center>✔</center> | <center>✔</center> | <center>❌</center> |
 
 

@@ -5,7 +5,7 @@ description: Used to identify the image used for a trail. The value is the path 
 hide_table_of_contents: true
 ---
 | Applies To | | Pathing (Blish HUD) | TacO | TaimiHUD | Burrito |
-|-|-|-|-|-|
+|-|-|-|-|-|-|
 | <center>Trails</center> | | <center>✔</center> | <center>✔</center> | <center>✔</center> | <center>✔</center> |
 
 

@@ -5,7 +5,7 @@ description: Used to indicate a trigger range. This attribute is used by multipl
 hide_table_of_contents: true
 ---
 | Applies To | | Pathing (Blish HUD) | TacO | TaimiHUD | Burrito |
-|-|-|-|-|-|
+|-|-|-|-|-|-|
 | <center>Markers</center> | | <center>✔</center> | <center>✔</center> | <center>❌</center> | <center>❌</center> |
 
 

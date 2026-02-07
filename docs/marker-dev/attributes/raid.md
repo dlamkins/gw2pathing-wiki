@@ -5,7 +5,7 @@ description: Hides markers and trails based on their associated raid completion 
 hide_table_of_contents: true
 ---
 | Applies To | | Pathing (Blish HUD) | TacO | TaimiHUD | Burrito |
-|-|-|-|-|-|
+|-|-|-|-|-|-|
 | <center>Markers, Trails</center> | | <center>✔</center> | <center>❌</center> | <center>✔</center> | <center>❌</center> |
 
 

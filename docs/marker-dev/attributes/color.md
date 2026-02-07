@@ -5,7 +5,7 @@ description: Tints the marker or trail with the color provided. Powerful when re
 hide_table_of_contents: true
 ---
 | Applies To | | Pathing (Blish HUD) | TacO | TaimiHUD | Burrito |
-|-|-|-|-|-|
+|-|-|-|-|-|-|
 | <center>Markers, Trails</center> | | <center>✔</center> | <center>✔</center> | <center>✔</center> | <center>❌</center> |
 
 

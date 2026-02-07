@@ -5,7 +5,7 @@ description: Allows a marker to "bounce" or rise up out of the way when triggere
 hide_table_of_contents: true
 ---
 | Applies To | | Pathing (Blish HUD) | TacO | TaimiHUD | Burrito |
-|-|-|-|-|-|
+|-|-|-|-|-|-|
 | <center>Markers</center> | | <center>✔</center> | <center>❌</center> | <center>❌</center> | <center>❌</center> |
 
 

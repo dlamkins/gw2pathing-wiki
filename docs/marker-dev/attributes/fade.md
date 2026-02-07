@@ -5,7 +5,7 @@ description: Indicates the distance that markers or trails should begin to fade 
 hide_table_of_contents: true
 ---
 | Applies To | | Pathing (Blish HUD) | TacO | TaimiHUD | Burrito |
-|-|-|-|-|-|
+|-|-|-|-|-|-|
 | <center>Markers, Trails</center> | | <center>✔</center> | <center>✔</center> | <center>❌</center> | <center>❌</center> |
 
 

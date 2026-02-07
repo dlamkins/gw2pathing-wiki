@@ -5,7 +5,7 @@ description: Allows you to display a tooltip on markers on the minimap or catego
 hide_table_of_contents: true
 ---
 | Applies To | | Pathing (Blish HUD) | TacO | TaimiHUD | Burrito |
-|-|-|-|-|-|
+|-|-|-|-|-|-|
 | <center>Markers, Category</center> | | <center>✔</center> | <center>❌</center> | <center>✔</center> | <center>❌</center> |
 
 

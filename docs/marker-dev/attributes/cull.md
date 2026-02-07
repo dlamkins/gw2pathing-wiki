@@ -5,7 +5,7 @@ description: By default markers and trails are rendered without culling meaning 
 hide_table_of_contents: true
 ---
 | Applies To | | Pathing (Blish HUD) | TacO | TaimiHUD | Burrito |
-|-|-|-|-|-|
+|-|-|-|-|-|-|
 | <center>Markers, Trails</center> | | <center>✔</center> | <center>❌</center> | <center>❌</center> | <center>❌</center> |
 
 
